@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '../../layouts/Layout.astro'
+import { formatDate } from '../../utils/dates'
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles')
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }))
+}
+
+const { article } = Astro.props
+// const { Content } = await article.render()
+---
+
+<Layout title={article.data.title} showBackButton>
+  <article class='prose lg:prose-xl mx-auto prose-invert'>
+    <header class='mb-8'>
+      <h1 class='text-4xl font-bold mb-4 text-white'>{article.data.title}</h1>
+      <div class='text-gray-300 mb-4'>{article.data.description}</div>
+      <time class='text-sm text-gray-400'>{formatDate(article.data.date)}</time>
+    </header>
+    <!-- <Content /> -->
+  </article>
+</Layout>

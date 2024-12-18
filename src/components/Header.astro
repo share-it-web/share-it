@@ -1,0 +1,31 @@
+---
+const navItems = [
+  { href: '/', text: 'Inicio' },
+  { href: '/articles', text: 'Artículos' },
+  { href: '/resources', text: 'Recursos' },
+]
+---
+
+<header class='bg-gray-800 py-4 shadow-lg'>
+  <nav
+    class='container mx-auto px-4 max-w-4xl flex items-center justify-between'
+  >
+    <a href='/' class='text-xl font-bold text-violet-400 hover:text-violet-300'>
+      Vdev
+    </a>
+    <ul class='flex gap-6'>
+      {
+        navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class='text-gray-300 hover:text-violet-300 transition-colors'
+            >
+              {item.text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>

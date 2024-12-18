@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { formatDate } from '../../utils/dates';
+
+const articles = await getCollection('articles', ({ data }) => {
+  return !data.draft;
+});
+
+const sortedArticles = articles.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+---
+
+<Layout title="Artículos | Mi Blog" showBackButton>
+  <h1 class="text-4xl font-bold text-center mb-8 text-white">Mis Artículos</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {sortedArticles.map((article) => (
+      <article class="border border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow bg-gray-800">
+        <h2 class="text-2xl font-bold mb-2">
+          <a href={`/articles/${article.slug}`} class="text-violet-400 hover:text-violet-300">
+            {article.data.title}
+          </a>
+        </h2>
+        <p class="text-gray-300 mb-4">{article.data.description}</p>
+        <div class="text-sm text-gray-400">
+          {formatDate(article.data.date)}
+        </div>
+      </article>
+    ))}
+  </div>
+</Layout>

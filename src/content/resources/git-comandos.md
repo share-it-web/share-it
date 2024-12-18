@@ -1,0 +1,27 @@
+---
+title: 'Comandos Esenciales de Git'
+description: 'Los comandos de Git que todo desarrollador debe conocer'
+category: 'Desarrollo'
+draft: false
+---
+
+# Comandos Esenciales de Git
+
+Una recopilación de los comandos más útiles de Git para el desarrollo diario.
+
+## Comandos básicos
+
+```bash
+git init
+git add .
+git commit -m "mensaje"
+git push
+git pull
+```
+
+## Flujos de trabajo comunes
+
+1. Crear una nueva rama
+2. Fusionar cambios
+3. Resolver conflictos
+4. Trabajar con remotos
