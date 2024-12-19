@@ -1,18 +1,9 @@
-# Astro Starter Kit: Basics
+# Blog VicDev👨🏻‍💻 _(muy pronto...🕝)_
 
-```sh
-npm create astro@latest -- --template basics
-```
+<p>Este blog es un espacio para compartir los conocimientos y recursos que me han acompañado y ayudado a lo largo de mi carrera.</p>
+<p>He aprendido lo esencial <b>que es la tecnología en nuestro día a día y cómo puede transformar vidas.</b> 🚀</p>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
+## Project Structure
 
 Inside of your Astro project, you'll see the following folders and files:
 
