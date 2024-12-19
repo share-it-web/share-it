@@ -1,28 +1,32 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+import { getCollection } from 'astro:content'
+import Layout from '../../layouts/Layout.astro'
+import AuthorInfo from '../../components/AuthorInfo.astro'
 
 export async function getStaticPaths() {
-  const resources = await getCollection('resources');
-  return resources.map(resource => ({
+  const resources = await getCollection('resources')
+  return resources.map((resource) => ({
     params: { slug: resource.slug },
     props: { resource },
-  }));
+  }))
 }
 
-const { resource } = Astro.props;
-const { Content } = await resource.render();
+const { resource } = Astro.props
+const { Content } = await resource.render()
 ---
 
 <Layout title={resource.data.title} showBackButton>
-  <article class="prose lg:prose-xl mx-auto prose-invert">
-    <header class="mb-8">
-      <h1 class="text-4xl font-bold mb-4 text-white">{resource.data.title}</h1>
-      <div class="text-gray-300 mb-4">{resource.data.description}</div>
-      <span class="bg-violet-900 text-violet-200 px-3 py-1 rounded-full text-sm">
+  <article class='prose lg:prose-xl mx-auto prose-invert'>
+    <header class='mb-8'>
+      <h1 class='text-4xl font-bold mb-4 text-white'>{resource.data.title}</h1>
+      <div class='text-gray-300 mb-4'>{resource.data.description}</div>
+      <span
+        class='bg-violet-900 text-violet-200 px-3 py-1 rounded-full text-sm'
+      >
         {resource.data.category}
       </span>
     </header>
+    <AuthorInfo {...resource.data.author} />
     <Content />
   </article>
 </Layout>

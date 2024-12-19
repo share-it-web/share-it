@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content'
 import Layout from '../../layouts/Layout.astro'
 import { formatDate } from '../../utils/dates'
+import AuthorInfo from '../../components/AuthorInfo.astro'
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles')
@@ -20,8 +21,11 @@ const { article } = Astro.props
     <header class='mb-8'>
       <h1 class='text-4xl font-bold mb-4 text-white'>{article.data.title}</h1>
       <div class='text-gray-300 mb-4'>{article.data.description}</div>
-      <time class='text-sm text-gray-400'>{formatDate(article.data.date)}</time>
+      <time class='text-sm text-gray-400'
+        >{formatDate(article.data.date.toISOString())}</time
+      >
     </header>
+    <AuthorInfo {...article.data.author} />
     <!-- <Content /> -->
   </article>
 </Layout>

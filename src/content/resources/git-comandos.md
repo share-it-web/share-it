@@ -3,6 +3,11 @@ title: 'Comandos Esenciales de Git'
 description: 'Los comandos de Git que todo desarrollador debe conocer'
 category: 'Desarrollo'
 draft: false
+author:
+  name: 'Carlos Ruiz'
+  avatar: 'https://i.pravatar.cc/300?img=8'
+  github: 'https://github.com/carlosruiz'
+  linkedin: 'https://linkedin.com/in/carlosruiz'
 ---
 
 # Comandos Esenciales de Git

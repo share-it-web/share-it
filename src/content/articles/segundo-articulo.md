@@ -1,8 +1,13 @@
 ---
-title: "Astro: El Framework del Futuro"
-description: "Descubre por qué Astro está ganando popularidad"
-date: "2024-03-21"
+title: 'Astro: El Framework del Futuro'
+description: 'Descubre por qué Astro está ganando popularidad'
+date: '2024-03-21'
 draft: false
+author:
+  name: 'Carlos Ruiz'
+  avatar: 'https://i.pravatar.cc/300?img=8'
+  github: 'https://github.com/carlosruiz'
+  linkedin: 'https://linkedin.com/in/carlosruiz'
 ---
 
 # Astro: El Framework del Futuro
@@ -19,6 +24,7 @@ Astro representa un cambio significativo en cómo construimos sitios web. Su enf
 ## Casos de uso
 
 Astro es perfecto para:
+
 - Blogs
 - Sitios de documentación
 - Portafolios

@@ -1,8 +1,13 @@
 ---
-title: "Guía Completa de Tailwind CSS"
-description: "Todo lo que necesitas saber para dominar Tailwind CSS"
-category: "CSS"
+title: 'Guía Completa de Tailwind CSS'
+description: 'Todo lo que necesitas saber para dominar Tailwind CSS'
+category: 'CSS'
 draft: false
+author:
+  name: 'Carlos Ruiz'
+  avatar: 'https://i.pravatar.cc/300?img=8'
+  github: 'https://github.com/carlosruiz'
+  linkedin: 'https://linkedin.com/in/carlosruiz'
 ---
 
 # Guía Completa de Tailwind CSS

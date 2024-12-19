@@ -1,8 +1,13 @@
 ---
-title: "Mi Primer Artículo"
-description: "Una introducción a la programación web moderna"
-date: "2024-03-20"
+title: 'Mi Primer Artículo'
+description: 'Una introducción a la programación web moderna'
+date: '2024-03-20'
 draft: false
+author:
+  name: 'Ana García'
+  avatar: 'https://i.pravatar.cc/300?img=1'
+  github: 'https://github.com/anagarcia'
+  linkedin: 'https://linkedin.com/in/anagarcia'
 ---
 
 # Mi Primer Artículo
