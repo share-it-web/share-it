@@ -2,11 +2,7 @@
 import { getCollection } from 'astro:content'
 import Layout from '../../layouts/Layout.astro'
 import ResourceCard from '../../components/ResourceCard.astro'
-import CategoryFilter from '../../components/CategoryFilter.astro'
-import {
-  filterResourcesByCategory,
-  getUniqueCategories,
-} from '../../utils/categories'
+import { filterResourcesByCategory } from '../../utils/categories'
 
 // Obtener la categoría de la URL y decodificarla
 const categoryParam = Astro.url.searchParams.get('category')
@@ -17,16 +13,12 @@ const allResources = await getCollection('resources', ({ data }) => {
   return !data.draft
 })
 
-// Obtener categorías únicas
-// const categories = getUniqueCategories(allResources)
-
 // Filtrar recursos por categoría
 const resources = filterResourcesByCategory(allResources, activeCategory)
 ---
 
 <Layout title='Recursos | Mi Blog' showBackButton>
   <h1 class='text-4xl font-bold text-center mb-8 text-white'>Recursos</h1>
-
   <!-- <CategoryFilter categories={categories} activeCategory={activeCategory} /> -->
 
   {

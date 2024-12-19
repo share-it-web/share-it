@@ -4,7 +4,6 @@ interface Tag {
 }
 
 export function getAllTags(resources: any[]): Tag[] {
-  // Create a map to count occurrences of each category
   const tagCount = new Map<string, number>()
 
   resources.forEach((resource) => {
@@ -12,7 +11,6 @@ export function getAllTags(resources: any[]): Tag[] {
     tagCount.set(category, (tagCount.get(category) || 0) + 1)
   })
 
-  // Convert map to array of Tag objects and sort by name
   return Array.from(tagCount.entries())
     .map(([name, count]) => ({ name, count }))
     .sort((a, b) => a.name.localeCompare(b.name))

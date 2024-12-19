@@ -13,15 +13,17 @@ export const AnimatedText = () => {
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .pauseFor(400)
+              .pauseFor(300)
               .typeString('<span>¡Hola Mundo!</span>')
               .pauseFor(300)
               .deleteAll('natural')
               .typeString('<span>Hello World!</span>')
               .deleteAll('natural')
+              .typeString('<span>Ciao Mondo!</span>')
+              .deleteAll('natural')
               .typeString('<span>こんにちは世界！</span>')
               .deleteAll('natural')
-              .pauseFor(1000)
+              .pauseFor(300)
               .start()
           }}
           options={{

@@ -29,16 +29,13 @@
       while (true) {
         const currentText = this.texts[this.currentIndex]
 
-        // Escribir el texto
         for (let i = 0; i <= currentText.length; i++) {
           this.element.textContent = currentText.substring(0, i)
           await this.delay(100)
         }
 
-        // Esperar antes de borrar
         await this.delay(2000)
 
-        // Borrar el texto
         for (let i = currentText.length; i >= 0; i--) {
           this.element.textContent = currentText.substring(0, i)
           await this.delay(50)
@@ -54,7 +51,6 @@
     }
   }
 
-  // Inicializar la animación
   document.addEventListener('DOMContentLoaded', () => {
     const element = document.querySelector('.animated-text')
     if (element) {
