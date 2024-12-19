@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 }
 
 const { article } = Astro.props
-// const { Content } = await article.render()
+const { Content } = await article.render()
 ---
 
 <Layout title={article.data.title} showBackButton>
@@ -26,6 +26,6 @@ const { article } = Astro.props
       >
     </header>
     <AuthorInfo {...article.data.author} />
-    <!-- <Content /> -->
+    <Content />
   </article>
 </Layout>

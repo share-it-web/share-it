@@ -23,7 +23,7 @@ const { categories, activeCategory } = Astro.props
     {
       categories.map((category) => (
         <a
-          href={`/resources?category=${encodeURIComponent(category)}`}
+          href={`/resources/?category=${encodeURIComponent(category)}`}
           class={`px-4 py-2 rounded-full transition-colors ${
             activeCategory === category
               ? 'bg-violet-600 text-white'

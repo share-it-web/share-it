@@ -1,0 +1,19 @@
+---
+import { getCollection } from 'astro:content'
+import Layout from '../../layouts/Layout.astro'
+import TagCard from '../../components/TagCard.astro'
+import { getAllTags } from '../../utils/tags'
+
+const resources = await getCollection('resources', ({ data }) => !data.draft)
+const tags = getAllTags(resources)
+---
+
+<Layout title='Tags | Mi Blog' showBackButton>
+  <h1 class='text-4xl font-bold text-center mb-8 text-white'>
+    Explorar por Tags
+  </h1>
+
+  <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+    {tags.map((tag) => <TagCard name={tag.name} count={tag.count} />)}
+  </div>
+</Layout>
