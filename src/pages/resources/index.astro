@@ -3,6 +3,7 @@ import ResourceCard from '@components/ResourceCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import { filterResourcesByCategory } from 'src/utils/categories'
+import { formatDate } from 'src/utils/dates'
 
 // Obtener la categoría de la URL y decodificarla
 const categoryParam = Astro.url.searchParams.get('category')
@@ -35,6 +36,7 @@ const resources = filterResourcesByCategory(allResources, activeCategory)
             title={resource.data.title}
             description={resource.data.description}
             category={resource.data.category}
+            date={resource.data.date}
             href={`/resources/${resource.slug}`}
           />
         ))}

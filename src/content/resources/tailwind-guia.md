@@ -1,6 +1,7 @@
 ---
 title: 'Guía Completa de Tailwind CSS'
 description: 'Todo lo que necesitas saber para dominar Tailwind CSS'
+date: '2024-03-20'
 category: 'CSS'
 draft: false
 author:

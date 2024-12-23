@@ -1,6 +1,7 @@
 ---
 title: 'Comandos Esenciales de Git'
 description: 'Los comandos de Git que todo desarrollador debe conocer'
+date: '2024-03-20'
 category: 'Desarrollo'
 draft: false
 author:

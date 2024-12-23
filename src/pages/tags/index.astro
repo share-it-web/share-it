@@ -5,7 +5,8 @@ import { getCollection } from 'astro:content'
 import { getAllTags } from 'src/utils/tags'
 
 const resources = await getCollection('resources', ({ data }) => !data.draft)
-const tags = getAllTags(resources)
+const articles = await getCollection('articles', ({ data }) => !data.draft)
+const tags = getAllTags(resources, articles)
 ---
 
 <Layout title='Tags | Mi Blog' showBackButton>

@@ -3,6 +3,7 @@ title: 'Mi Primer Artículo'
 description: 'Una introducción a la programación web moderna'
 date: '2024-03-20'
 draft: false
+category: 'Desarrollo'
 author:
   name: 'Ana García'
   avatar: 'https://i.pravatar.cc/300?img=1'

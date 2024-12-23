@@ -27,6 +27,11 @@ const sortedArticles = articles.sort(
             </a>
           </h2>
           <p class='text-gray-300 mb-4'>{article.data.description}</p>
+          <div class='flex items-center gap-2 text-sm'>
+            <span class='bg-violet-900 text-violet-200 px-2 py-1 rounded'>
+              {article.data.category}
+            </span>
+          </div>
           <div class='text-sm text-gray-400'>
             {formatDate(article.data.date.toISOString())}
           </div>

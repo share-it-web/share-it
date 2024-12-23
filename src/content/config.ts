@@ -14,12 +14,14 @@ const articleSchema = z.object({
   description: z.string(),
   date: z.string().transform((str) => new Date(str)),
   draft: z.boolean().default(false),
+  category: z.string(),
   author: authorSchema,
 })
 
 const resourceSchema = z.object({
   title: z.string(),
   description: z.string(),
+  date: z.string().transform((str) => new Date(str)),
   category: z.string(),
   draft: z.boolean().default(false),
   author: authorSchema,
