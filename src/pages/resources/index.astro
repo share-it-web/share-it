@@ -1,8 +1,8 @@
 ---
+import ResourceCard from '@components/ResourceCard.astro'
+import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-import Layout from '../../layouts/Layout.astro'
-import ResourceCard from '../../components/ResourceCard.astro'
-import { filterResourcesByCategory } from '../../utils/categories'
+import { filterResourcesByCategory } from 'src/utils/categories'
 
 // Obtener la categoría de la URL y decodificarla
 const categoryParam = Astro.url.searchParams.get('category')

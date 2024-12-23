@@ -3,8 +3,10 @@ import { defineCollection, z } from 'astro:content'
 const authorSchema = z.object({
   name: z.string(),
   avatar: z.string(),
+  role: z.string(),
   github: z.string().optional(),
   linkedin: z.string().optional(),
+  website: z.string().optional(),
 })
 
 const articleSchema = z.object({

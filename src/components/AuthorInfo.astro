@@ -4,9 +4,10 @@ interface Props {
   avatar: string
   github?: string
   linkedin?: string
+  role: string
 }
 
-const { name, avatar, github, linkedin } = Astro.props
+const { name, avatar, github, linkedin, role } = Astro.props
 ---
 
 <div class='flex items-center gap-4 mt-6 p-4 bg-gray-800 rounded-lg'>
@@ -16,7 +17,8 @@ const { name, avatar, github, linkedin } = Astro.props
     class='w-12 h-12 rounded-full object-cover border-2 border-violet-400'
   />
   <div>
-    <p class='font-medium text-white'>{name}</p>
+    <p class='font-medium text-white mb-0'>{name}</p>
+    <p class='font-medium text-white mb-0'>{role}</p>
     <div class='flex gap-3 mt-1'>
       {
         github && (

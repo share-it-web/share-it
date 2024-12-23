@@ -6,6 +6,7 @@ draft: false
 author:
   name: 'Ana García'
   avatar: 'https://i.pravatar.cc/300?img=1'
+  role: 'Frontend Developer'
   github: 'https://github.com/anagarcia'
   linkedin: 'https://linkedin.com/in/anagarcia'
 ---

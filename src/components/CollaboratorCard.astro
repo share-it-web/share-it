@@ -2,20 +2,20 @@
 interface Props {
   name: string
   role: string
-  image: string
+  avatar: string
   github?: string
   linkedin?: string
   website?: string
 }
 
-const { name, role, image, github, linkedin, website } = Astro.props
+const { name, role, avatar, github, linkedin, website } = Astro.props
 ---
 
 <article
   class='bg-gray-800 rounded-lg p-6 flex flex-col items-center text-center'
 >
   <img
-    src={image}
+    src={avatar}
     alt={name}
     class='w-32 h-32 rounded-full mb-4 object-cover border-4 border-violet-400'
   />

@@ -1,7 +1,24 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import { collaborators } from '../data/collaborators'
-import CollaboratorCard from '../components/CollaboratorCard.astro'
+import CollaboratorCard from '@components/CollaboratorCard.astro'
+import Layout from '@layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+
+const resources = await getCollection('resources', ({ data }) => {
+  return !data.draft
+})
+
+const articles = await getCollection('articles', ({ data }) => {
+  return !data.draft
+})
+
+const authors = [
+  ...resources.map((resource) => resource.data.author),
+  ...articles.map((article) => article.data.author),
+]
+
+const uniqueAuthors = Array.from(
+  new Set(authors.map((author) => author.github))
+).map((github) => authors.find((author) => author.github === github))
 ---
 
 <Layout title='Colaboradores | Mi Blog' showBackButton>
@@ -11,11 +28,7 @@ import CollaboratorCard from '../components/CollaboratorCard.astro'
     </h1>
 
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-      {
-        collaborators.map((collaborator) => (
-          <CollaboratorCard {...collaborator} />
-        ))
-      }
+      {uniqueAuthors.map((author) => <CollaboratorCard {...author} />)}
     </div>
   </div>
 </Layout>

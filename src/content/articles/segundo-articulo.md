@@ -6,8 +6,10 @@ draft: false
 author:
   name: 'Victor Quiñones'
   avatar: 'https://i.pravatar.cc/300?img=8'
+  role: 'Frontend Developer'
   github: 'https://github.com/vctorqui'
   linkedin: 'https://linkedin.com/in/victorqui'
+  website: 'https://victorqui-portfolio.netlify.app/'
 ---
 
 ## Introducción
@@ -36,7 +38,7 @@ Ahora tenemos el siguiente ejercicio, mejor conocido como Two Sum. Es el problem
 **Problema:** Dado un array de enteros, devuelve los índices de los dos números que suman un objetivo dado.
 
 ```bash
--- Ejemplos Inputs y Outputs -- 
+-- Ejemplos Inputs y Outputs --
 
 // Ejemplo 1:
 

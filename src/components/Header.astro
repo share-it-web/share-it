@@ -1,4 +1,6 @@
 ---
+import ShareIt from '@icons/ShareIt.astro'
+
 const navItems = [
   { href: '/', text: 'Inicio' },
   { href: '/articles', text: 'Artículos' },
@@ -8,12 +10,12 @@ const navItems = [
 ]
 ---
 
-<header class='bg-gray-800 py-4 shadow-lg'>
+<header class='bg-gray-800 shadow-lg'>
   <nav
     class='container mx-auto px-4 max-w-4xl flex items-center justify-between'
   >
     <a href='/' class='text-xl font-bold text-violet-400 hover:text-violet-300'>
-      Vdev
+      <ShareIt class='w-8 h-8 inline-block' />
     </a>
     <ul class='flex gap-6'>
       {

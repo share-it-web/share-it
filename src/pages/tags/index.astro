@@ -1,8 +1,8 @@
 ---
+import TagCard from '@components/TagCard.astro'
+import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-import Layout from '../../layouts/Layout.astro'
-import TagCard from '../../components/TagCard.astro'
-import { getAllTags } from '../../utils/tags'
+import { getAllTags } from 'src/utils/tags'
 
 const resources = await getCollection('resources', ({ data }) => !data.draft)
 const tags = getAllTags(resources)

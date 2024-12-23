@@ -1,7 +1,7 @@
 ---
+import AuthorInfo from '@components/AuthorInfo.astro'
+import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-import Layout from '../../layouts/Layout.astro'
-import AuthorInfo from '../../components/AuthorInfo.astro'
 
 export async function getStaticPaths() {
   const resources = await getCollection('resources')
@@ -26,7 +26,7 @@ const { Content } = await resource.render()
         {resource.data.category}
       </span>
     </header>
-    <AuthorInfo {...resource.data.author} />
     <Content />
+    <AuthorInfo {...resource.data.author} />
   </article>
 </Layout>

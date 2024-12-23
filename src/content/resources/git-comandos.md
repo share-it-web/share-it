@@ -6,6 +6,7 @@ draft: false
 author:
   name: 'Carlos Ruiz'
   avatar: 'https://i.pravatar.cc/300?img=8'
+  role: 'Frontend Developer'
   github: 'https://github.com/carlosruiz'
   linkedin: 'https://linkedin.com/in/carlosruiz'
 ---

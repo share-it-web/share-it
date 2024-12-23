@@ -1,8 +1,8 @@
 ---
+import ResourceCard from '@components/ResourceCard.astro'
+import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-import Layout from '../../layouts/Layout.astro'
-import ResourceCard from '../../components/ResourceCard.astro'
-import { getAllTags } from '../../utils/tags'
+import { getAllTags } from 'src/utils/tags'
 
 export async function getStaticPaths() {
   const resources = await getCollection('resources')
