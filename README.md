@@ -1,8 +1,8 @@
-# Blog VicDev
+# Blog
 
 ## Descripción
 
-Blog VicDev es un proyecto de blog personal donde comparto artículos sobre desarrollo de software, tecnología y temas relacionados. Además, otros desarrolladores también son bienvenidos a compartir sus artículos y recursos. El objetivo es proporcionar contenido útil y educativo para la comunidad de desarrolladores.
+Blog es un proyecto de blog personal donde comparto artículos sobre desarrollo de software, tecnología y temas relacionados. Además, otros desarrolladores también son bienvenidos a compartir sus artículos y recursos. El objetivo es proporcionar contenido útil y educativo para la comunidad de desarrolladores.
 
 ## Funcionalidades
 
