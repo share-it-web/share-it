@@ -2,28 +2,21 @@
 import ResourceCard from '@components/ResourceCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-import { filterResourcesByCategory } from 'src/utils/categories'
-import { formatDate } from 'src/utils/dates'
 
-// Obtener la categoría de la URL y decodificarla
-const categoryParam = Astro.url.searchParams.get('category')
-const activeCategory = categoryParam ? decodeURIComponent(categoryParam) : null
-
-// Obtener todos los recursos no borrador
-const allResources = await getCollection('resources', ({ data }) => {
+const resources = await getCollection('resources', ({ data }) => {
   return !data.draft
 })
 
-// Filtrar recursos por categoría
-const resources = filterResourcesByCategory(allResources, activeCategory)
+const sortedResources = resources.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+)
 ---
 
 <Layout title='Recursos | Mi Blog' showBackButton>
   <h1 class='text-4xl font-bold text-center mb-8 text-white'>Recursos</h1>
-  <!-- <CategoryFilter categories={categories} activeCategory={activeCategory} /> -->
 
   {
-    resources.length === 0 ? (
+    sortedResources.length === 0 ? (
       <div class='text-center py-12'>
         <p class='text-gray-400 text-lg'>
           No se encontraron recursos en esta categoría.
@@ -31,7 +24,7 @@ const resources = filterResourcesByCategory(allResources, activeCategory)
       </div>
     ) : (
       <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-        {resources.map((resource) => (
+        {sortedResources.map((resource) => (
           <ResourceCard
             title={resource.data.title}
             description={resource.data.description}

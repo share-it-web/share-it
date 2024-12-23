@@ -18,7 +18,6 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.props
 
-// Get both resources and articles with the matching category
 const resources = await getCollection('resources', ({ data }) => {
   return !data.draft && data.category.toLowerCase() === tag.toLowerCase()
 })
@@ -27,7 +26,6 @@ const articles = await getCollection('articles', ({ data }) => {
   return !data.draft && data.category?.toLowerCase() === tag.toLowerCase()
 })
 
-// Add type information to distinguish between resources and articles
 const contentItems = [
   ...resources.map((item) => ({
     ...item,

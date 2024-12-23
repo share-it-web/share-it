@@ -1,7 +1,7 @@
 ---
+import ResourceCard from '@components/ResourceCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-import { formatDate } from 'src/utils/dates'
 
 const articles = await getCollection('articles', ({ data }) => {
   return !data.draft
@@ -17,25 +17,13 @@ const sortedArticles = articles.sort(
   <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
     {
       sortedArticles.map((article) => (
-        <article class='border border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow bg-gray-800'>
-          <h2 class='text-2xl font-bold mb-2'>
-            <a
-              href={`/articles/${article.slug}`}
-              class='text-violet-400 hover:text-violet-300'
-            >
-              {article.data.title}
-            </a>
-          </h2>
-          <p class='text-gray-300 mb-4'>{article.data.description}</p>
-          <div class='flex items-center gap-2 text-sm'>
-            <span class='bg-violet-900 text-violet-200 px-2 py-1 rounded'>
-              {article.data.category}
-            </span>
-          </div>
-          <div class='text-sm text-gray-400'>
-            {formatDate(article.data.date.toISOString())}
-          </div>
-        </article>
+        <ResourceCard
+          title={article.data.title}
+          description={article.data.description}
+          category={article.data.category}
+          date={article.data.date}
+          href={`/articles/${article.slug}`}
+        />
       ))
     }
   </div>
