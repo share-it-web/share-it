@@ -1,8 +1,8 @@
-# Blog VicDev
+# Share It Blog
 
 ## Descripción
 
-Blog VicDev es un proyecto de blog personal donde comparto artículos sobre desarrollo de software, tecnología y temas relacionados. Además, otros desarrolladores también son bienvenidos a compartir sus artículos y recursos. El objetivo es proporcionar contenido útil y educativo para la comunidad de desarrolladores.
+Bienvenido a **Share It**. Un rincón para compartir los conocimientos y recursos que me han guiado y ayudado, tanto a mí como a otros desarrolladores, en nuestro recorrido.
 
 ## Funcionalidades
 
@@ -87,6 +87,7 @@ Para añadir nuevos artículos y recursos al blog, sigue estos pasos:
 ## Añadir Colaboradores
 
 Para añadir nuevos colaboradores, edita el archivo `src/data/collaborators.ts` y añade un nuevo objeto al array `collaborators` con la siguiente estructura:
+
 ```typescript
     {
       name: 'Nombre del Colaborador',
