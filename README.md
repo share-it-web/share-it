@@ -76,7 +76,7 @@ Para añadir nuevos artículos y recursos al blog, sigue estos pasos:
    title: 'Título del Artículo'
    date: 'YYYY-MM-DD'
    author: 'Nombre del Autor'
-   tags: ['etiqueta1', 'etiqueta2']
+   tags: 'etiqueta'
    ---
    Contenido del artículo en formato Markdown.
 
@@ -86,20 +86,20 @@ Para añadir nuevos artículos y recursos al blog, sigue estos pasos:
 
 ## Añadir Colaboradores
 
-Para añadir nuevos colaboradores, edita el archivo `src/data/collaborators.ts` y añade un nuevo objeto al array `collaborators` con la siguiente estructura:
+Para aparecer en la sección de colaboradores, añade tus datos dentro de los archivos Markdown de artículos o recursos (`src/content/articles/` o `src/content/resources`). Asegúrate de incluir la información del autor en el siguiente formato:
 
-```typescript
-    {
-      name: 'Nombre del Colaborador',
-      role: 'Rol del Colaborador',
-      image: 'URL de la Imagen',
-      github: 'URL de GitHub',
-      linkedin: 'URL de LinkedIn',
-      website: 'URL del Sitio Web',
-    }
+```markdown
+---
+author:
+  name: 'Nombre del Autor'
+  avatar: 'URL del Avatar'
+  role: 'Rol del Autor'
+  github: 'URL de GitHub'
+  linkedin: 'URL de LinkedIn'
+---
 ```
 
-¡Gracias por visitar Blog VicDev!
+¡Gracias por visitar Share it!
 
 ## Project Structure
 
