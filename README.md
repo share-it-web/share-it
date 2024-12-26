@@ -4,13 +4,13 @@
 
 Bienvenido a **Share It**. Un rincón para compartir los conocimientos y recursos que me han guiado y ayudado, tanto a mí como a otros desarrolladores, en nuestro recorrido. 🌟
 
-## Funcionalidades
+## 🛠️ Funcionalidades
 
 - 📝 Publicación de artículos y recursos.
 - 🏷️ Categorías y etiquetas para organizar el contenido.
 - 🔍 Búsqueda de artículos y recursos.
 
-## Instalación
+## 💻 Instalación
 
 Para ejecutar este proyecto localmente, sigue estos pasos:
 
@@ -40,7 +40,7 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 
 5. Abre tu navegador y ve a `http://localhost:4321` para ver el blog en funcionamiento. 🌐
 
-## Contribuir
+## 🤝 Contribuir
 
 ¡Las contribuciones son bienvenidas! 🎉 Si deseas contribuir a este proyecto, sigue estos pasos:
 
@@ -65,7 +65,7 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 
 5. Abre un Pull Request en GitHub y describe los cambios que has realizado.
 
-## Añadir Artículos y Recursos
+## 📄 Añadir Artículos y Recursos
 
 Para añadir nuevos artículos y recursos al blog, sigue estos pasos:
 
@@ -85,7 +85,7 @@ Para añadir nuevos artículos y recursos al blog, sigue estos pasos:
 
 2. Guarda el archivo y el nuevo artículo aparecerá automáticamente en el blog. ✨
 
-## Añadir Colaboradores
+## 👥 Añadir Colaboradores
 
 Para aparecer en la sección de colaboradores, añade tus datos dentro de los archivos Markdown de artículos o recursos (`src/content/articles/` o `src/content/resources`). Asegúrate de incluir la información del autor en el siguiente formato:
 
@@ -102,7 +102,7 @@ author:
 
 ¡Gracias por visitar Share it! 🙌
 
-## Estructura del Proyecto
+## 🗂️ Estructura del Proyecto
 
 Dentro de tu proyecto Astro, verás las siguientes carpetas y archivos:
 
