@@ -9,7 +9,7 @@ const articles = await getCollection('articles', ({ data }) => !data.draft)
 const tags = getAllTags(resources, articles)
 ---
 
-<Layout title='Tags | Mi Blog' showBackButton>
+<Layout title='Tags | Share it' showBackButton>
   <h1 class='text-4xl font-bold text-center mb-8 text-white'>
     Explorar por Tags
   </h1>

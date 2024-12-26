@@ -2,7 +2,7 @@ import Typewriter from 'typewriter-effect'
 
 export const AnimatedText = () => {
   const styledText =
-    'font-mono text-4xl leading-loose bg-clip-text text-transparent bg-gradient-to-r from-violet-400 to-purple-600'
+    'font-mono text-4xl leading-loose bg-clip-text text-transparent bg-gradient-to-r from-[#314aa9] via-[#368beb] to-[#83d6e7]'
   const typeText = 'font-mono text-4xl leading-loose'
 
   return (

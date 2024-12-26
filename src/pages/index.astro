@@ -1,5 +1,6 @@
 ---
 import { AnimatedText } from '@components/AnimatedText'
+import ResourceCard from '@components/ResourceCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 
@@ -18,22 +19,23 @@ const latestResources = resources.slice(0, 2)
 export const prerender = true
 ---
 
-<Layout title='Mi Blog Personal'>
+<Layout title='Share it Blog'>
   <div
     class='text-center mb-16 py-12 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg'
   >
     <AnimatedText client:load />
     <p class='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-      Bienvenido a <span class='font-bold text-violet-400'>Share It</span>. Un
-      rincón para compartir los conocimientos y recursos que me han guiado y
-      ayudado, tanto a mí como a otros desarrolladores, en nuestro recorrido. En
-      mi camino, he aprendido lo fundamental que es la tecnología en nuestras
-      vidas diarias y cómo puede realmente transformar vidas.
+      Bienvenido a <span class='font-bold text-[#83D6E7]'>Share</span>
+      <span class='font-bold text-[#586ab1]'>IT</span>. Un rincón para compartir
+      los conocimientos y recursos que me han guiado y ayudado, tanto a mí como
+      a otros desarrolladores, en nuestro recorrido. En mi camino, he aprendido
+      lo fundamental que es la tecnología en nuestras vidas diarias y cómo puede
+      realmente transformar vidas.
     </p>
     <div class='flex justify-center gap-4'>
       <a
         href='/articles'
-        class='bg-violet-600 hover:bg-violet-700 text-white px-6 py-2 rounded-full transition-colors'
+        class='bg-[#314aa9] hover:bg-[#2f3fca] text-white px-6 py-2 rounded-full'
       >
         Ver Artículos
       </a>
@@ -51,25 +53,18 @@ export const prerender = true
     <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
       {
         latestArticles.map((article) => (
-          <article class='border border-gray-700 rounded-lg p-6 bg-gray-800'>
-            <h3 class='text-xl font-bold mb-2'>
-              <a
-                href={`/articles/${article.slug}`}
-                class='text-violet-400 hover:text-violet-300'
-              >
-                {article.data.title}
-              </a>
-            </h3>
-            <p class='text-gray-300'>{article.data.description}</p>
-            <span class='bg-violet-900 text-violet-200 text-sm px-2 py-1 rounded'>
-              {article.data.category}
-            </span>
-          </article>
+          <ResourceCard
+            title={article.data.title}
+            description={article.data.description}
+            category={article.data.category}
+            date={article.data.date}
+            href={`/articles/${article.slug}`}
+          />
         ))
       }
     </div>
     <div class='text-center mt-4'>
-      <a href='/articles' class='text-violet-400 hover:text-violet-300'
+      <a href='/articles' class='text-[#8b96fa] hover:text-[#daebf0]'
         >Ver todos los artículos →</a
       >
     </div>
@@ -80,25 +75,18 @@ export const prerender = true
     <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
       {
         latestResources.map((resource) => (
-          <article class='border border-gray-700 rounded-lg p-6 bg-gray-800'>
-            <h3 class='text-xl font-bold mb-2'>
-              <a
-                href={`/resources/${resource.slug}`}
-                class='text-violet-400 hover:text-violet-300'
-              >
-                {resource.data.title}
-              </a>
-            </h3>
-            <p class='text-gray-300 mb-2'>{resource.data.description}</p>
-            <span class='bg-violet-900 text-violet-200 text-sm px-2 py-1 rounded'>
-              {resource.data.category}
-            </span>
-          </article>
+          <ResourceCard
+            title={resource.data.title}
+            description={resource.data.description}
+            category={resource.data.category}
+            date={resource.data.date}
+            href={`/resources/${resource.slug}`}
+          />
         ))
       }
     </div>
     <div class='text-center mt-4'>
-      <a href='/resources' class='text-violet-400 hover:text-violet-300'
+      <a href='/resources' class='text-[#8b96fa] hover:text-[#daebf0]'
         >Ver todos los recursos →</a
       >
     </div>

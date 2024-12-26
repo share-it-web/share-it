@@ -1,5 +1,5 @@
 ---
-import AuthorInfo from '@components/AuthorInfo.astro'
+import CollaboratorCard from '@components/CollaboratorCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import { formatDate } from 'src/utils/dates'
@@ -26,6 +26,6 @@ const { Content } = await article.render()
       >
     </header>
     <Content />
-    <AuthorInfo {...article.data.author} />
+    <CollaboratorCard {...article.data.author} />
   </article>
 </Layout>
