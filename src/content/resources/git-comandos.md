@@ -5,11 +5,12 @@ date: '2024-11-21'
 category: 'Desarrollo'
 draft: false
 author:
-  name: 'Carlos Ruiz'
-  avatar: 'https://i.pravatar.cc/300?img=8'
+  name: 'Victor Quiñones'
+  avatar: 'https://i.ibb.co/Dzd33xD/profile-perfil.jpg'
   role: 'Frontend Developer'
-  github: 'https://github.com/carlosruiz'
-  linkedin: 'https://linkedin.com/in/carlosruiz'
+  github: 'https://github.com/vctorqui'
+  linkedin: 'https://linkedin.com/in/victorqui'
+  website: 'https://victorqui-portfolio.netlify.app/'
 ---
 
 # Comandos Esenciales de Git
