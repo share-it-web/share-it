@@ -2,7 +2,7 @@
 
 # Share It Blog 🚀
 
-Bienvenido a **Share It**. Un rincón para compartir los conocimientos y recursos que me han guiado y ayudado, tanto a mí como a otros desarrolladores, en nuestro recorrido. 🌟
+Bienvenido a **Share It**. Un rincón para compartir los conocimientos y recursos que me han guiado y ayudado, tanto a mí como a otros desarrolladores, en nuestro recorrido. En mi camino, he aprendido lo fundamental que es la tecnología en nuestras vidas diarias y cómo puede realmente transformar vidas. 🌟
 
 ## 🛠️ Funcionalidades
 
