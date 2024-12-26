@@ -1,6 +1,6 @@
-# Share It Blog 🚀
 
-## Descripción
+![blog-logo](https://github.com/user-attachments/assets/abe6f530-723e-4d4d-8924-2b6d40cd58c8)
+# Share It Blog 🚀
 
 Bienvenido a **Share It**. Un rincón para compartir los conocimientos y recursos que me han guiado y ayudado, tanto a mí como a otros desarrolladores, en nuestro recorrido. 🌟
 
