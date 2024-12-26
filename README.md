@@ -125,6 +125,14 @@ Dentro de tu proyecto Astro, verás las siguientes carpetas y archivos:
 └── package.json
 ```
 
+
+
+## 🚀 Conoce al creador y el repositorio de la comunidad
+- [Elias Velazquez 👨🏻‍💻](https://github.com/eliasvelazquezdev)
+- [Share It Recursos 📃](https://github.com/eliasvelazquezdev/share-it-resources)
+
+---
+
 Para aprender más sobre la estructura de carpetas de un proyecto Astro, consulta [nuestra guía sobre la estructura del proyecto](https://docs.astro.build/en/basics/project-structure/).
 
 ## 🧞 Comandos
