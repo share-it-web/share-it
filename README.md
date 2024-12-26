@@ -1,14 +1,14 @@
-
 ![blog-logo](https://github.com/user-attachments/assets/abe6f530-723e-4d4d-8924-2b6d40cd58c8)
+
 # Share It Blog 🚀
 
 Bienvenido a **Share It**. Un rincón para compartir los conocimientos y recursos que me han guiado y ayudado, tanto a mí como a otros desarrolladores, en nuestro recorrido. 🌟
 
 ## Funcionalidades
 
-- 📝 Publicación de artículos
-- 🏷️ Categorías y etiquetas para organizar el contenido
-- 🔍 Búsqueda de artículos
+- 📝 Publicación de artículos y recursos.
+- 🏷️ Categorías y etiquetas para organizar el contenido.
+- 🔍 Búsqueda de artículos y recursos.
 
 ## Instalación
 
@@ -74,6 +74,7 @@ Para añadir nuevos artículos y recursos al blog, sigue estos pasos:
    ```typescript
    ---
    title: 'Título del Artículo'
+   description: 'Descripción del articulo o recurso'
    date: 'YYYY-MM-DD'
    author: 'Nombre del Autor'
    tags: 'etiqueta'
@@ -101,15 +102,18 @@ author:
 
 ¡Gracias por visitar Share it! 🙌
 
-## Project Structure
+## Estructura del Proyecto
 
-Inside of your Astro project, you'll see the following folders and files:
+Dentro de tu proyecto Astro, verás las siguientes carpetas y archivos:
 
 ```text
 /
 ├── public/
 │   └── favicon.svg
 ├── src/
+│   ├── content/
+│   │   ├── articles/
+│   │   └── resources/
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
@@ -117,21 +121,21 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Para aprender más sobre la estructura de carpetas de un proyecto Astro, consulta [nuestra guía sobre la estructura del proyecto](https://docs.astro.build/en/basics/project-structure/).
 
-## 🧞 Commands
+## 🧞 Comandos
 
-All commands are run from the root of the project, from a terminal:
+Todos los comandos se ejecutan desde la raíz del proyecto, desde una terminal:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Comando                   | Acción                                                      |
+| :------------------------ | :---------------------------------------------------------- |
+| `npm install`             | Instala las dependencias                                    |
+| `npm run dev`             | Inicia el servidor de desarrollo local en `localhost:4321`  |
+| `npm run build`           | Construye tu sitio de producción en `./dist/`               |
+| `npm run preview`         | Previsualiza tu construcción localmente, antes de desplegar |
+| `npm run astro ...`       | Ejecuta comandos CLI como `astro add`, `astro check`        |
+| `npm run astro -- --help` | Obtén ayuda usando el CLI de Astro                          |
 
-## 👀 Want to learn more?
+## 👀 ¿Quieres aprender más?
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+No dudes en consultar [Astro](https://docs.astro.build)
