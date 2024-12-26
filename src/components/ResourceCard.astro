@@ -7,13 +7,15 @@ interface Props {
   category: string
   href: string
   date: Date
+  additionalClasses?: string
 }
 
-const { title, description, category, href, date } = Astro.props
+const { title, description, category, href, date, additionalClasses } =
+  Astro.props
 ---
 
 <article
-  class='border border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow bg-gray-800 relative min-h-[250px]'
+  class=`border border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow bg-gray-800 relative ${additionalClasses}`
 >
   <h3 class='text-xl font-bold mb-2'>
     <a href={href} class='text-[#8b96fa] hover:text-[#daebf0]'>

@@ -6,7 +6,7 @@ draft: false
 category: 'Desarrollo'
 author:
   name: 'Victor Quiñones'
-  avatar: 'https://i.pravatar.cc/300?img=8'
+  avatar: 'https://i.ibb.co/Dzd33xD/profile-perfil.jpg'
   role: 'Frontend Developer'
   github: 'https://github.com/vctorqui'
   linkedin: 'https://linkedin.com/in/victorqui'

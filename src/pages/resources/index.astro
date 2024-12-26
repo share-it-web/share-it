@@ -19,13 +19,14 @@ const sortedResources = resources.sort(
     sortedResources.length === 0 ? (
       <div class='text-center py-12'>
         <p class='text-gray-400 text-lg'>
-          No se encontraron recursos en esta categoría.
+          Aun no hay recursos publicados. ¡Vuelve pronto!🚀
         </p>
       </div>
     ) : (
       <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {sortedResources.map((resource) => (
           <ResourceCard
+            additionalClasses='min-h-[300px]'
             title={resource.data.title}
             description={resource.data.description}
             category={resource.data.category}

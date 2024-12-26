@@ -14,17 +14,26 @@ const sortedArticles = articles.sort(
 
 <Layout title='Artículos | Share it' showBackButton>
   <h1 class='text-4xl font-bold text-center mb-8 text-white'>Artículos</h1>
-  <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+  <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
     {
-      sortedArticles.map((article) => (
-        <ResourceCard
-          title={article.data.title}
-          description={article.data.description}
-          category={article.data.category}
-          date={article.data.date}
-          href={`/articles/${article.slug}`}
-        />
-      ))
+      sortedArticles.length === 0 ? (
+        <div class='text-center py-12'>
+          <p class='text-gray-400 text-lg'>
+            Aun no hay artículos publicados. ¡Vuelve pronto!🚀
+          </p>
+        </div>
+      ) : (
+        sortedArticles.map((article) => (
+          <ResourceCard
+            additionalClasses='min-h-[300px]'
+            title={article.data.title}
+            description={article.data.description}
+            category={article.data.category}
+            date={article.data.date}
+            href={`/articles/${article.slug}`}
+          />
+        ))
+      )
     }
   </div>
 </Layout>
