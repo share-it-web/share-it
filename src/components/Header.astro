@@ -17,13 +17,15 @@ const navItems = [
     <a href='/'>
       <ShareIt class='w-8 h-8 inline-block' />
     </a>
-    <ul class='flex gap-6'>
+    <ul class='flex gap-6' id='menu'>
       {
         navItems.map((item) => (
-          <li>
+          <li
+            class={`md:flex ${item.text === 'Tags' || item.text === 'Colaboradores' ? 'flex' : 'hidden'}`}
+          >
             <a
               href={item.href}
-              class='text-gray-300 hover:text-[#8b96fa] transition-colors'
+              class='text-gray-300 hover:text-[#8b96fa] transition-colors font-bold'
             >
               {item.text}
             </a>
@@ -33,15 +35,3 @@ const navItems = [
     </ul>
   </nav>
 </header>
-
-<style>
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    ul {
-      display: none;
-    }
-  }
-</style>

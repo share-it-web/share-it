@@ -30,5 +30,14 @@ const uniqueAuthors = Array.from(
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
       {uniqueAuthors.map((author) => <CollaboratorCard {...author} />)}
     </div>
+
+    <div class='text-center mt-10'>
+      <a
+        href='https://github.com/Vctorqui/share-it-blog'
+        class='bg-[#314aa9] hover:bg-[#2f3fca] text-white px-6 py-2 rounded-full'
+      >
+        Si quieres colaborar dirígete a nuestro repositorio
+      </a>
+    </div>
   </div>
 </Layout>
