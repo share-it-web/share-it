@@ -17,13 +17,13 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/blog-vicdev.git
+   git clone https://github.com/tu-usuario/share-it-blog.git
    ```
 
 2. Navega al directorio del proyecto:
 
    ```bash
-   cd blog-vicdev
+   cd share-it-blog
    ```
 
 3. Instala las dependencias:
@@ -117,7 +117,11 @@ Dentro de tu proyecto Astro, verás las siguientes carpetas y archivos:
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
-│       └── index.astro
+|       └── articles/
+|       └── resources/
+|       └── tags/
+│       └── collaborators.astro
+|       └── index.astro
 └── package.json
 ```
 

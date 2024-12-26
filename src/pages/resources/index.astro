@@ -26,7 +26,6 @@ const sortedResources = resources.sort(
       <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {sortedResources.map((resource) => (
           <ResourceCard
-            additionalClasses='min-h-[300px]'
             title={resource.data.title}
             description={resource.data.description}
             category={resource.data.category}

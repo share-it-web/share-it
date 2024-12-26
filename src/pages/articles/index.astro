@@ -25,7 +25,6 @@ const sortedArticles = articles.sort(
       ) : (
         sortedArticles.map((article) => (
           <ResourceCard
-            additionalClasses='min-h-[300px]'
             title={article.data.title}
             description={article.data.description}
             category={article.data.category}
