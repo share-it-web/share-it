@@ -2,8 +2,8 @@ import Typewriter from 'typewriter-effect'
 
 export const AnimatedText = () => {
   const styledText =
-    'font-mono text-4xl leading-loose bg-clip-text text-transparent bg-gradient-to-r from-[#314aa9] via-[#368beb] to-[#83d6e7]'
-  const typeText = 'font-mono text-4xl leading-loose'
+    'font-mono text-2xl sm:text-2xl md:text-4xl leading-loose bg-clip-text text-transparent bg-gradient-to-r from-[#314aa9] via-[#368beb] to-[#83d6e7]'
+  const typeText = 'font-mono sm:text-lg md:text-4xl leading-loose'
 
   return (
     <div className='flex items-center justify-center text-center'>

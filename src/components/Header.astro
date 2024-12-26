@@ -14,7 +14,7 @@ const navItems = [
   <nav
     class='container mx-auto px-4 max-w-4xl flex items-center justify-between'
   >
-    <a href='/' '>
+    <a href='/'>
       <ShareIt class='w-8 h-8 inline-block' />
     </a>
     <ul class='flex gap-6'>
@@ -33,3 +33,15 @@ const navItems = [
     </ul>
   </nav>
 </header>
+
+<style>
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    ul {
+      display: none;
+    }
+  }
+</style>
