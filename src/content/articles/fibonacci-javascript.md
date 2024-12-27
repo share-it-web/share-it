@@ -1,6 +1,6 @@
 ---
 title: 'Sucesión de Fibonacci con JavaScript'
-description: 'Qué es sucesión de fibonacci y cómo podemos resolverla con Recursividad y el Bucle for.'
+description: 'Qué es la sucesión de Fibonacci y cómo podemos resolverla con Recursividad y el Bucle for.'
 date: '2024-04-30'
 draft: false
 category: 'JavaScript'
@@ -17,7 +17,7 @@ author:
 
 ## ¿Qué es la Sucesión de Fibonacci? 🤔
 
-En matemáticas, la sucesión de Fibonacci es una serie infinita de números naturales que empieza con los valores iniciales 0 y 1, y continúa añadiendo números que son la suma de los anteriores. Es decir: 0, 1, 1, 2, 3, 5, 8, y así sucesivamente. Quizá ahora te estés preguntando, ¿cómo puedo resolver esa sucesión usando JavaScript? Pues ahora te voy a mostrar dos formas en las que podemos implementar para obtener dichos resultados.
+En matemáticas, la sucesión de Fibonacci es una serie infinita de números naturales que empieza con los valores iniciales 0 y 1, y continúa añadiendo números que son la suma de los anteriores. Es decir: 0, 1, 1, 2, 3, 5, 8, y así sucesivamente. Quizá ahora te estés preguntando, ¿cómo puedo resolver esa sucesión usando JavaScript? Pues ahora te voy a mostrar dos formas en las que podemos implementarla para obtener dichos resultados.
 
 ---
 
@@ -25,7 +25,7 @@ En matemáticas, la sucesión de Fibonacci es una serie infinita de números nat
 
 La recursividad en programación es una técnica que consiste en que una función se llame a sí misma.
 
-Ahora vienen las incógnitas, si una función se llama a sí misma, ¿cómo puedo evitar que se llame infinitamente? Para evitar lo que normalmente conocemos como el 'bucle infinito', esta función debe tener una condición base.
+Ahora vienen las incógnitas, si una función se llama a sí misma, ¿cómo puedo evitar que se llame infinitamente? Para evitar lo que normalmente conocemos como el _bucle infinito_, esta función debe tener una condición base.
 
 Como podemos ver en el código de abajo, la forma en la que evitamos que esta función entre en un bucle infinito es añadiéndole una condición que permita que, si la misma no se cumple, podamos salir del bucle.
 

@@ -61,12 +61,12 @@ Output: [0, 2]
 
 Necesitamos encontrar la combinación de que la suma de dos números dé el target deseado. Entonces, ¿qué podemos hacer?🤔 Pues aquí es donde entra uno de los consejos, antes de codear, dividir el problema en fragmentos.
 
-## Comprender el problema
+### Comprender el problema
 
 - Comprender el problema, para eso debemos saber cuál es el objetivo, el cual es encontrar dos números en un array que sumen un valor y que devuelvan el índice.
 - Tenemos una entrada que está conformada por un array de enteros 'nums' y un entero llamado 'target'. También tenemos una salida que representa los índices de los números que suman el 'target'.
 
-## Definir los casos de prueba del ejercicio
+### Definir los casos de prueba del ejercicio
 
 ```bash
 // Input: nums = [6, 2, 3]; target = 8
@@ -76,10 +76,12 @@ Necesitamos encontrar la combinación de que la suma de dos números dé el targ
 
 Pero, ¿qué sucede si no hay dos números que sumen el objetivo?🤔
 
-## Plantear una estrategia
+### Plantear una estrategia
 
 - Usar dos bucles anidados para verificar las combinaciones posibles.
 - Usar un diccionario (hash map) para almacenar números vistos y sus índices.
+
+---
 
 **Método a:**
 
@@ -87,7 +89,28 @@ Pero, ¿qué sucede si no hay dos números que sumen el objetivo?🤔
 - Luego debemos comprobar si el par dado suma nuestro `target`, si es así entonces nos va a retornar los dos índices.
 - Si no hay ninguna combinación devuelve un texto.
 
-**Ejercicio Two Sum - Método a**
+```javascript
+function twoSum(nums, target) {
+  // 1. Iterar sobre los pares de números posibles
+  for (let i = 0; i < nums.length; i++) {
+    // j está siempre por delante de i para no revaluar sumas ya evaluadas
+    for (let j = i + 1; j < nums.length; j++) {
+      // 2. Comprobar si un par dado coincide con nuestro target
+      if (nums[i] + nums[j] == target) {
+        // Devuelve los indices cuando se ha encontrado un par
+        return [i, j]
+      }
+    }
+  }
+  return 'No se ha encontrado ninguna combinación que sume el target'
+}
+```
+
+<div align="center">
+<b>Ejercicio Two Sum - Método a</b>
+</div>
+
+---
 
 **Método b:**
 
@@ -97,7 +120,32 @@ Pero, ¿qué sucede si no hay dos números que sumen el objetivo?🤔
 - Luego necesitamos calcular y almacenar en una variable el complemento que con el "currentNum" suma al `target`.
 - Verificamos si el complemento existe, si existe devolvemos el índice del complemento y el número actual, si no existe, guardamos el número actual y su índice en "seen".
 
-**Ejercicio Two Sum - Método b**
+```javascript
+function twoSum(nums, target) {
+  // Creamos un objecto (diccionario) para almacenar los números vistos y sus indices
+  const seen = {}
+  // Iteramos a través del array nums
+  for (let i = 0; i < nums.length; i++) {
+    // Guardamos el número actual en una variable
+    const currentNum = nums[i]
+
+    // Calculamos el componente que, junto con currentNum, suma target
+    const complement = target - currentNum
+
+    // Verificamos si el componente ya esta en el objeto seen
+    if (seen[complement] !== undefined) {
+      // Si está, devolvemos los indices del complemento y del número actual
+      return [seen[complement], i]
+    }
+    // Si el complemento no está, guardamos el número actual y su indice en seen
+    seen[currentNum] = i
+  }
+}
+```
+
+<div align='center'>
+<b>Ejercicio Two Sum - Método b</b>
+</div>
 
 Et voilà. El ejercicio está resuelto🤯
 
