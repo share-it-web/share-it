@@ -70,25 +70,34 @@ export const prerender = true
     </div>
   </section>
 
-  <section>
-    <h2 class='text-3xl font-bold mb-6 text-white'>Recursos Destacados</h2>
-    <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
-      {
-        latestResources.map((resource) => (
-          <ResourceCard
-            title={resource.data.title}
-            description={resource.data.description}
-            category={resource.data.category}
-            date={resource.data.date}
-            href={`/resources/${resource.slug}`}
-          />
-        ))
-      }
-    </div>
-    <div class='text-center mt-4'>
-      <a href='/resources' class='text-[#368beb] hover:text-[#83D6E7]'
-        >Ver todos los recursos →</a
-      >
-    </div>
-  </section>
+  {
+    latestResources.length === 0 ? (
+      <div class='text-center py-12'>
+        <h2 class='text-3xl font-bold mb-6 text-white text-start'>Recursos</h2>
+        <p class='text-gray-400 text-lg'>
+          Aún no hay recursos publicados. ¡Vuelve pronto!🚀
+        </p>
+      </div>
+    ) : (
+      <section>
+        <h2 class='text-3xl font-bold mb-6 text-white'>Recursos Destacados</h2>
+        <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
+          {latestResources.map((resource) => (
+            <ResourceCard
+              title={resource.data.title}
+              description={resource.data.description}
+              category={resource.data.category}
+              date={resource.data.date}
+              href={`/resources/${resource.slug}`}
+            />
+          ))}
+        </div>
+        <div class='text-center mt-4'>
+          <a href='/resources' class='text-[#368beb] hover:text-[#83D6E7]'>
+            Ver todos los recursos →
+          </a>
+        </div>
+      </section>
+    )
+  }
 </Layout>

@@ -74,7 +74,7 @@ Para añadir nuevos artículos y recursos al blog, sigue estos pasos:
    ```typescript
    ---
    title: 'Título del Artículo'
-   description: 'Descripción del articulo o recurso'
+   description: 'Corta descripción del articulo o recurso'
    date: 'YYYY-MM-DD'
    author: 'Nombre del Autor'
    tags: 'etiqueta'
@@ -97,10 +97,11 @@ author:
   role: 'Rol del Autor'
   github: 'URL de GitHub'
   linkedin: 'URL de LinkedIn'
+  website: 'URL del porfolio web'
 ---
 ```
 
-¡Gracias por visitar Share it! 🙌
+**¡Gracias por visitar Share it! 🙌**
 
 ## 🗂️ Estructura del Proyecto
 
@@ -125,15 +126,14 @@ Dentro de tu proyecto Astro, verás las siguientes carpetas y archivos:
 └── package.json
 ```
 
-
-
 ## 🚀 Conoce al creador y el repositorio de la comunidad
+
 - [Elias Velazquez 👨🏻‍💻](https://github.com/eliasvelazquezdev)
 - [Share It Recursos 📃](https://github.com/eliasvelazquezdev/share-it-resources)
 
 ---
 
-Para aprender más sobre la estructura de carpetas de un proyecto Astro, consulta [nuestra guía sobre la estructura del proyecto](https://docs.astro.build/en/basics/project-structure/).
+Para aprender más sobre la estructura de carpetas de un proyecto Astro, consulta [guía sobre la estructura de proyectos en Astro](https://docs.astro.build/en/basics/project-structure/).
 
 ## 🧞 Comandos
 
