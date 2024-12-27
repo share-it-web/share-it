@@ -28,7 +28,21 @@ const uniqueAuthors = Array.from(
     </h1>
 
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-      {uniqueAuthors.map((author) => <CollaboratorCard {...author} />)}
+      {
+        uniqueAuthors.map(
+          (author) =>
+            author && (
+              <CollaboratorCard
+                name={author.name}
+                role={author.role}
+                avatar={author.avatar}
+                github={author.github}
+                linkedin={author.linkedin}
+                website={author.website}
+              />
+            )
+        )
+      }
     </div>
 
     <div class='text-center mt-10'>

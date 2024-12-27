@@ -32,7 +32,7 @@ const { title, showBackButton = false } = Astro.props
         showBackButton && (
           <a
             href='javascript:history.back()'
-            class='inline-flex items-center gap-2 text-violet-400 hover:text-violet-300 mb-6'
+            class='inline-flex items-center gap-2 text-[#83d6e7] hover:text-[#368beb] mb-6'
           >
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -108,8 +108,12 @@ const { title, showBackButton = false } = Astro.props
   }
 
   /* Estilos para el contenido markdown */
+
   .prose h2 {
     @apply text-2xl font-bold mt-8 mb-4 text-[#8b96fa];
+  }
+  .prose h3 {
+    @apply text-xl font-semibold mt-6 mb-3 text-[#83D6E7];
   }
   .prose p {
     @apply mb-4 leading-relaxed text-gray-300;
@@ -128,5 +132,8 @@ const { title, showBackButton = false } = Astro.props
   }
   .prose blockquote {
     @apply border-l-4 border-violet-400 pl-4 italic text-gray-400;
+  }
+  .prose hr {
+    @apply border-t border-gray-700 my-4;
   }
 </style>

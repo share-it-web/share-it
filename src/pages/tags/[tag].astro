@@ -40,7 +40,7 @@ const contentItems = [
 
 <Layout title={`${tag} | Tags`}>
   <div class='mb-8'>
-    <a href='/tags' class='text-shareit-turquoise hover:text-shareit-cyan'
+    <a href='/tags' class='text-[#368beb] hover:text-[#83d6e7]'
       >← Volver a Tags</a
     >
   </div>
@@ -55,9 +55,7 @@ const contentItems = [
       <div class='space-y-12'>
         {articles.length > 0 && (
           <section>
-            <h2 class='text-2xl font-bold mb-6 text-shareit-turquoise'>
-              Artículos
-            </h2>
+            <h2 class='text-2xl font-bold mb-6 text-[#83d6e7]'>Artículos</h2>
             <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
               {articles.map((article) => (
                 <ResourceCard
@@ -74,9 +72,7 @@ const contentItems = [
 
         {resources.length > 0 && (
           <section>
-            <h2 class='text-2xl font-bold mb-6 text-shareit-turquoise'>
-              Recursos
-            </h2>
+            <h2 class='text-2xl font-bold mb-6 text-[#83d6e7]'>Recursos</h2>
             <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
               {resources.map((resource) => (
                 <ResourceCard

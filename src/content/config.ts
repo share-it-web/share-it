@@ -12,7 +12,7 @@ const authorSchema = z.object({
 const articleSchema = z.object({
   title: z.string(),
   description: z.string(),
-  date: z.string().transform((str) => new Date(str)),
+  date: z.string().transform((str) => new Date(str + 'T00:00:00')),
   draft: z.boolean().default(false),
   category: z.string(),
   author: authorSchema,
@@ -21,7 +21,7 @@ const articleSchema = z.object({
 const resourceSchema = z.object({
   title: z.string(),
   description: z.string(),
-  date: z.string().transform((str) => new Date(str)),
+  date: z.string().transform((str) => new Date(str + 'T00:00:00')),
   category: z.string(),
   draft: z.boolean().default(false),
   author: authorSchema,

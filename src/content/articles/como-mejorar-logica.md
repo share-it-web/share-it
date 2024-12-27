@@ -13,6 +13,8 @@ author:
   website: 'https://victorqui-portfolio.netlify.app/'
 ---
 
+---
+
 ## Introducción
 
 Muchos programadores, y me incluyo, hemos sufrido alguna vez intentando resolver un problema. A veces sentimos mucha frustración cuando estamos estancados en algo y no encontramos solución. En ese momento de frustración, debemos respirar y dividir el problema en pequeñas soluciones.
