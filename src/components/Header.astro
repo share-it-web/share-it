@@ -5,8 +5,9 @@ const navItems = [
   { href: '/', text: 'Inicio' },
   { href: '/articles', text: 'Artículos' },
   { href: '/resources', text: 'Recursos' },
+  { href: '/aboutUs', text: 'Sobre nosotros' },
   { href: '/tags', text: 'Tags' },
-  { href: '/collaborators', text: 'Colaboradores' },
+  { href: '/collaborators', text: 'Autores' },
 ]
 ---
 
@@ -21,7 +22,7 @@ const navItems = [
       {
         navItems.map((item) => (
           <li
-            class={`md:flex ${item.text === 'Tags' || item.text === 'Colaboradores' ? 'flex' : 'hidden'}`}
+            class={`md:flex ${item.text === 'Tags' || item.text === 'Autores' ? 'flex' : 'hidden'}`}
           >
             <a
               href={item.href}

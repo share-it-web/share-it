@@ -42,40 +42,20 @@ Para ejecutar este proyecto localmente, sigue estos pasos:
 
 ## 🤝 Contribuir
 
-¡Las contribuciones son bienvenidas! 🎉 Si deseas contribuir a este proyecto, sigue estos pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una nueva rama para tu funcionalidad o corrección de errores:
-
-   ```bash
-   git checkout -b nombre-de-tu-rama
-   ```
-
-3. Realiza tus cambios y haz commit:
-
-   ```bash
-   git commit -m "Descripción de tus cambios"
-   ```
-
-4. Sube tus cambios a tu repositorio fork:
-
-   ```bash
-   git push origin nombre-de-tu-rama
-   ```
-
-5. Abre un Pull Request en GitHub y describe los cambios que has realizado.
+**Nota:** Para añadir nuevos artículos, debes ser parte de nuestra comunidad. Si deseas contribuir creando artículos en el futuro, por favor únete a nuestra comunidad. Ten en cuenta que también se revisará detalladamente el artículo antes de publicarlo😉
 
 ## 📄 Añadir Artículos y Recursos
 
 Para añadir nuevos artículos y recursos al blog, sigue estos pasos:
 
-1. Crea un nuevo archivo Markdown en el directorio `src/content/articles/` o `src/content/resources` con la siguiente estructura:
+1. Crea un nuevo archivo Markdown en el directorio `src/content/articles/` con la siguiente estructura:
 
    ```typescript
    ---
    title: 'Título del Artículo'
-   description: 'Corta descripción del articulo o recurso'
+   description: 'Descripción corta del articulo'
    date: 'YYYY-MM-DD'
+   draft: false
    author: 'Nombre del Autor'
    tags: 'etiqueta'
    ---
@@ -85,9 +65,31 @@ Para añadir nuevos artículos y recursos al blog, sigue estos pasos:
 
 2. Guarda el archivo y el nuevo artículo aparecerá automáticamente en el blog. ✨
 
-## 👥 Añadir Colaboradores
+Para añadir nuevos recursos, crea un nuevo objeto en el archivo `src/utils/resources.ts` con las siguientes propiedades:
 
-Para aparecer en la sección de colaboradores, añade tus datos dentro de los archivos Markdown de artículos o recursos (`src/content/articles/` o `src/content/resources`). Asegúrate de incluir la información del autor en el siguiente formato:
+```typescript
+interface Resource {
+  title: string
+  description: string
+  slug: string
+  date: Date
+  category: string
+}
+
+export const resources: Resource[] = [
+  {
+    title: 'Nuevo Recurso',
+    description: 'Descripción del nuevo recurso.',
+    slug: 'URL del recurso',
+    date: new Date('YYYY-MM-DD'),
+    category: 'Categoría del recurso',
+  },
+]
+```
+
+## 👥 Añadir Autores
+
+Para aparecer en la sección de Autores, añade tus datos dentro de los archivos Markdown de artículos (`src/content/articles/`). Asegúrate de incluir la información del autor en el siguiente formato:
 
 ```markdown
 ---
@@ -98,6 +100,7 @@ author:
   github: 'URL de GitHub'
   linkedin: 'URL de LinkedIn'
   website: 'URL del porfolio web'
+  about: 'Descripción corta del Autor'
 ---
 ```
 
@@ -114,15 +117,15 @@ Dentro de tu proyecto Astro, verás las siguientes carpetas y archivos:
 ├── src/
 │   ├── content/
 │   │   ├── articles/
-│   │   └── resources/
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
 |       └── articles/
-|       └── resources/
 |       └── tags/
+│       └── aboutUs.astro
 │       └── collaborators.astro
-|       └── index.astro
+│       └── collaborators.astro
+|       └── resources.astro
 └── package.json
 ```
 

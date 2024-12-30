@@ -4,11 +4,19 @@ import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import { formatDate } from 'src/utils/dates'
 import { getAllTags } from 'src/utils/tags'
+import { resources as allResources, resources } from 'src/utils/resources'
 
 export async function getStaticPaths() {
-  const resources = await getCollection('resources')
+  // const resources = await getCollection('resources')
   const articles = await getCollection('articles')
-  const tags = getAllTags(resources, articles)
+  const tags = getAllTags(
+    allResources.map((resource) => ({
+      ...resource,
+      data: { ...resource, type: 'resource' as const },
+      slug: resource.slug,
+    })),
+    articles
+  )
 
   return tags.map((tag) => ({
     params: { tag: tag.name.toLowerCase() },
@@ -18,22 +26,22 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.props
 
-const resources = await getCollection('resources', ({ data }) => {
-  return !data.draft && data.category.toLowerCase() === tag.toLowerCase()
-})
+const filteredResources = allResources.filter(
+  (resource) => resource.category?.toLowerCase() === tag.toLowerCase()
+)
 
 const articles = await getCollection('articles', ({ data }) => {
   return !data.draft && data.category?.toLowerCase() === tag.toLowerCase()
 })
 
 const contentItems = [
-  ...resources.map((item) => ({
+  ...filteredResources.map((item) => ({
     ...item,
-    data: { ...item.data, type: 'resource' as const },
+    data: { ...item, type: 'resource' as const },
   })),
   ...articles.map((item) => ({
-    ...item,
-    data: { ...item.data, type: 'article' as const },
+    ...item.data,
+    type: 'article' as const,
   })),
 ]
 ---
@@ -53,9 +61,9 @@ const contentItems = [
   {
     contentItems.length > 0 ? (
       <div class='space-y-12'>
-        {articles.length > 0 && (
-          <section>
-            <h2 class='text-2xl font-bold mb-6 text-[#83d6e7]'>Artículos</h2>
+        <section>
+          <h2 class='text-2xl font-bold mb-6 text-[#83d6e7]'>Artículos</h2>
+          {articles.length > 0 ? (
             <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
               {articles.map((article) => (
                 <ResourceCard
@@ -67,25 +75,33 @@ const contentItems = [
                 />
               ))}
             </div>
-          </section>
-        )}
+          ) : (
+            <p class='text-center text-gray-400 py-12'>
+              No se encontraron artículos en esta categoría.
+            </p>
+          )}
+        </section>
 
-        {resources.length > 0 && (
-          <section>
-            <h2 class='text-2xl font-bold mb-6 text-[#83d6e7]'>Recursos</h2>
+        <section>
+          <h2 class='text-2xl font-bold mb-6 text-[#83d6e7]'>Recursos</h2>
+          {filteredResources.length > 0 ? (
             <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
-              {resources.map((resource) => (
+              {filteredResources.map((resource) => (
                 <ResourceCard
-                  date={resource.data.date}
-                  title={resource.data.title}
-                  description={resource.data.description}
-                  category={resource.data.category}
-                  href={`/resources/${resource.slug}`}
+                  date={resource.date}
+                  title={resource.title}
+                  description={resource.description}
+                  category={resource.category}
+                  href={resource.slug}
                 />
               ))}
             </div>
-          </section>
-        )}
+          ) : (
+            <p class='text-center text-gray-400 py-12'>
+              No se encontraron recursos en esta categoría.
+            </p>
+          )}
+        </section>
       </div>
     ) : (
       <p class='text-center text-gray-400 py-12'>

@@ -7,6 +7,8 @@ const authorSchema = z.object({
   github: z.string().optional(),
   linkedin: z.string().optional(),
   website: z.string().optional(),
+  about: z.string(),
+  articleCount: z.number().optional(),
 })
 
 const articleSchema = z.object({
@@ -18,26 +20,11 @@ const articleSchema = z.object({
   author: authorSchema,
 })
 
-const resourceSchema = z.object({
-  title: z.string(),
-  description: z.string(),
-  date: z.string().transform((str) => new Date(str + 'T00:00:00')),
-  category: z.string(),
-  draft: z.boolean().default(false),
-  author: authorSchema,
-})
-
 const articles = defineCollection({
   //   type: 'content',
   schema: articleSchema,
 })
 
-const resources = defineCollection({
-  //   type: 'content',
-  schema: resourceSchema,
-})
-
 export const collections = {
   articles,
-  resources,
 }

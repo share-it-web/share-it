@@ -3,11 +3,9 @@ import { AnimatedText } from '@components/AnimatedText'
 import ResourceCard from '@components/ResourceCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
+import { resources } from 'src/utils/resources'
 
 const articles = await getCollection('articles', ({ data }) => {
-  return !data.draft
-})
-const resources = await getCollection('resources', ({ data }) => {
   return !data.draft
 })
 
@@ -32,18 +30,18 @@ export const prerender = true
       los conocimientos y recursos que me han guiado y ayudado, tanto a mí como
       a otros desarrolladores, en nuestro recorrido.
     </p>
-    <div class='flex justify-center gap-4'>
+    <div class='flex sm:flex-row justify-center gap-4 flex-col'>
       <a
         href='/articles'
         class='bg-[#314aa9] hover:bg-[#2f3fca] text-white px-6 py-2 rounded-full'
       >
-        Ver Artículos
+        Explorar Artículos
       </a>
       <a
-        href='/resources'
+        href='/aboutUs'
         class='border-[#314aa9] hover:border-[#83d6e7] border-2 text-white px-6 py-2 rounded-full transition-colors'
       >
-        Explorar Recursos
+        Acerca de nosotros
       </a>
     </div>
   </div>
@@ -84,11 +82,11 @@ export const prerender = true
         <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
           {latestResources.map((resource) => (
             <ResourceCard
-              title={resource.data.title}
-              description={resource.data.description}
-              category={resource.data.category}
-              date={resource.data.date}
-              href={`/resources/${resource.slug}`}
+              title={resource.title}
+              description={resource.description}
+              category={resource.category}
+              date={resource.date}
+              href={resource.slug}
             />
           ))}
         </div>

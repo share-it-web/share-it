@@ -3,31 +3,29 @@ import CollaboratorCard from '@components/CollaboratorCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 
-const resources = await getCollection('resources', ({ data }) => {
-  return !data.draft
-})
+// const resources = await getCollection('resources', ({ data }) => {
+//   return !data.draft
+// })
 
 const articles = await getCollection('articles', ({ data }) => {
   return !data.draft
 })
 
 const authors = [
-  ...resources.map((resource) => resource.data.author),
+  // ...resources.map((resource) => resource.data.author),
   ...articles.map((article) => article.data.author),
 ]
 
 const uniqueAuthors = Array.from(
-  new Set(authors.map((author) => author.github))
-).map((github) => authors.find((author) => author.github === github))
+  new Set(authors.map((author) => author.name))
+).map((name) => authors.find((author) => author.name === name))
 ---
 
-<Layout title='Colaboradores | Mi Blog' showBackButton>
+<Layout title='Colaboradores | Share It' showBackButton>
   <div class='max-w-4xl mx-auto'>
-    <h1 class='text-4xl font-bold text-center mb-8 text-white'>
-      Colaboradores
-    </h1>
+    <h1 class='text-4xl font-bold text-center mb-8 text-white'>Autores</h1>
 
-    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+    <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
       {
         uniqueAuthors.map(
           (author) =>
@@ -39,19 +37,25 @@ const uniqueAuthors = Array.from(
                 github={author.github}
                 linkedin={author.linkedin}
                 website={author.website}
+                about={author.about}
+                articleCount={
+                  articles.filter(
+                    (article) => article.data.author.github === author.github
+                  ).length
+                }
               />
             )
         )
       }
     </div>
 
-    <div class='text-center mt-10'>
+    <!-- <div class='text-center mt-10'>
       <a
         href='https://github.com/Vctorqui/share-it-blog'
         class='inline-block bg-[#314aa9] hover:bg-[#2f3fca] text-white px-6 py-2 rounded-full w-full sm:w-auto'
       >
         Si quieres contribuir dirígete a nuestro repositorio
       </a>
-    </div>
+    </div> -->
   </div>
 </Layout>

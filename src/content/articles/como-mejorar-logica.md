@@ -11,6 +11,7 @@ author:
   github: 'https://github.com/vctorqui'
   linkedin: 'https://linkedin.com/in/victorqui'
   website: 'https://victorqui-portfolio.netlify.app/'
+  about: 'Especializado en crear interfaces web eficientes, intuitivas y escalables, he descubierto la importancia y el poder transformador de la tecnología en nuestra vida cotidiana.'
 ---
 
 ---

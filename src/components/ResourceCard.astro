@@ -17,7 +17,11 @@ const { title, description, category, href, date } = Astro.props
 >
   <div class='mb-2'>
     <h3 class='text-lg font-bold mb-2'>
-      <a href={href} class='text-[#368beb] hover:text-[#83d6e7]'>
+      <a
+        href={href}
+        class='text-[#368beb] hover:text-[#83d6e7]'
+        rel='noopener noreferrer'
+      >
         {title}
       </a>
     </h3>
