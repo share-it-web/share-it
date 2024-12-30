@@ -1,5 +1,22 @@
 ---
 import Layout from '@layouts/Layout.astro'
+import GithubIcon from '@icons/GithubIcon.astro'
+import WhatsappIcon from '@icons/WhatsappIcon.astro'
+
+const socialLinks = [
+  {
+    title: 'GitHub de la comunidad',
+    description: 'Repositorio de la comunidad',
+    url: '',
+    icon: GithubIcon,
+  },
+  {
+    title: 'WhatsApp de la comunidad',
+    description: 'Únete a la comunidad',
+    url: '',
+    icon: WhatsappIcon,
+  },
+]
 ---
 
 <Layout title='Acerca de | Share It' showBackButton>
@@ -23,14 +40,21 @@ import Layout from '@layouts/Layout.astro'
     <p class='text-lg text-gray-200 leading-relaxed font-bold'>
       Únete a nosotros y sé parte de esta increíble comunidad.🚀
     </p>
-    <div class='text-center mt-10'>
-      <a
-        rel='noopener noreferrer'
-        href='https://github.com/eliasvelazquezdev/share-it-resources'
-        class='inline-block bg-[#314aa9] hover:bg-[#2f3fca] text-white px-6 py-2 rounded-full w-full sm:w-auto'
-      >
-        Repositorio de la comunidad
-      </a>
+    <div class='flex sm:flex-row justify-center gap-4 flex-col mt-10'>
+      {
+        socialLinks.map((link) => (
+          <a
+            aria-label={link.title}
+            rel='noopener noreferrer'
+            target='_blank'
+            href={link.url}
+            class='flex items-center justify-center gap-2 bg-[#314aa9] hover:bg-[#2f3fca] text-white px-6 py-2 rounded-full w-full sm:w-auto font-semibold'
+          >
+            {link.description}
+            <link.icon />
+          </a>
+        ))
+      }
     </div>
   </div>
 </Layout>
