@@ -3,18 +3,11 @@ import CollaboratorCard from '@components/CollaboratorCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 
-// const resources = await getCollection('resources', ({ data }) => {
-//   return !data.draft
-// })
-
 const articles = await getCollection('articles', ({ data }) => {
   return !data.draft
 })
 
-const authors = [
-  // ...resources.map((resource) => resource.data.author),
-  ...articles.map((article) => article.data.author),
-]
+const authors = [...articles.map((article) => article.data.author)]
 
 const uniqueAuthors = Array.from(
   new Set(authors.map((author) => author.name))
@@ -23,7 +16,12 @@ const uniqueAuthors = Array.from(
 
 <Layout title='Colaboradores | Share It' showBackButton>
   <div class='max-w-4xl mx-auto'>
-    <h1 class='text-4xl font-bold text-center mb-8 text-white'>Autores</h1>
+    <div class='flex flex-col items-center mb-8 gap-2'>
+      <h1 class='text-4xl font-bold text-center text-white'>Autores</h1>
+      <span class='text-lg text-center text-gray-400'
+        >Conoce a los cracks que han compartido su conocimiento en Share IT.</span
+      >
+    </div>
 
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
       {

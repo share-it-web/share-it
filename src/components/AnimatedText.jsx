@@ -2,8 +2,8 @@ import Typewriter from 'typewriter-effect'
 
 export const AnimatedText = () => {
   const styledText =
-    'font-mono text-lg sm:text-xl md:text-4xl leading-loose bg-clip-text text-transparent bg-gradient-to-r from-[#314aa9] via-[#368beb] to-[#83d6e7]'
-  const typeText = 'font-mono text-xl sm:text-lg md:text-4xl leading-loose'
+    'font-mono text-[1rem] sm:text-xl md:text-4xl leading-loose bg-clip-text text-transparent bg-gradient-to-r from-[#314aa9] via-[#368beb] to-[#83d6e7]'
+  const typeText = 'font-mono text-[1rem] sm:text-lg md:text-4xl leading-loose'
 
   return (
     <div className='flex items-center justify-center text-center'>
@@ -21,8 +21,9 @@ export const AnimatedText = () => {
               .deleteAll('natural')
               .typeString('<span>Ciao Mondo!</span>')
               .deleteAll('natural')
-              .typeString('<span>こんにちは世界！</span>')
+              .typeString('<span>こんにちは世界</span>')
               .deleteAll('natural')
+              .typeString('<span>Hallo Verden!</span>')
               .pauseFor(300)
               .start()
           }}
