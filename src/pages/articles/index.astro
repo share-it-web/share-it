@@ -13,7 +13,13 @@ const sortedArticles = articles.sort(
 ---
 
 <Layout title='Artículos | Share it' showBackButton>
-  <h1 class='text-4xl font-bold text-center mb-8 text-white'>Artículos</h1>
+  <div class='flex flex-col items-center mb-8 gap-2'>
+    <h1 class='text-4xl font-bold text-center text-white'>Artículos</h1>
+    <span class='text-lg text-center text-gray-400'>
+      Artículos escritos por desarrolladores de la comunidad de Share IT.📃
+    </span>
+  </div>
+
   <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
     {
       sortedArticles.length === 0 ? (
