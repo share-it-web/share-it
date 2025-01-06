@@ -121,28 +121,7 @@ function twoSum(nums, target) {
 - Luego necesitamos calcular y almacenar en una variable el complemento que con el "currentNum" suma al `target`.
 - Verificamos si el complemento existe, si existe devolvemos el índice del complemento y el número actual, si no existe, guardamos el número actual y su índice en "seen".
 
-```javascript
-function twoSum(nums, target) {
-  // Creamos un objecto (diccionario) para almacenar los números vistos y sus indices
-  const seen = {}
-  // Iteramos a través del array nums
-  for (let i = 0; i < nums.length; i++) {
-    // Guardamos el número actual en una variable
-    const currentNum = nums[i]
-
-    // Calculamos el componente que, junto con currentNum, suma target
-    const complement = target - currentNum
-
-    // Verificamos si el componente ya esta en el objeto seen
-    if (seen[complement] !== undefined) {
-      // Si está, devolvemos los indices del complemento y del número actual
-      return [seen[complement], i]
-    }
-    // Si el complemento no está, guardamos el número actual y su indice en seen
-    seen[currentNum] = i
-  }
-}
-```
+![two-sum-2](https://github.com/user-attachments/assets/b588e2eb-8158-4962-adf7-42f711bdc91d)
 
 <div align='center'>
 <b>Ejercicio Two Sum - Método b</b>
