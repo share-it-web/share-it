@@ -3,7 +3,7 @@ import './style.css'
 
 export const AnimatedText = () => {
   const typeText =
-    'font-mono text-[1rem] sm:text-xl md:text-2xl leading-loose text-gray-200 p-2'
+    'font-mono text-[1rem] md:text-xl leading-loose text-gray-200 p-2'
 
   return (
     <div className='flex items-center justify-center text-center aspect-auto'>
