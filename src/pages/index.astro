@@ -1,5 +1,5 @@
 ---
-import { AnimatedText } from '@components/AnimatedText'
+import { AnimatedText } from '@components/AnimatedText/AnimatedText'
 import ResourceCard from '@components/ResourceCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
@@ -22,13 +22,16 @@ export const prerender = true
     class='text-center mb-16 px-4 py-12 bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg'
   >
     <AnimatedText client:load />
-    <p
-      class='text-base sm:text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto mt-2'
-    >
-      Bienvenido a <span class='font-bold text-[#83D6E7]'>Share</span>
-      <span class='font-bold text-[#586ab1]'>IT</span>. Un rincón para compartir
-      los conocimientos y recursos que me han guiado y ayudado, tanto a mí como
-      a otros desarrolladores, en nuestro recorrido.
+    <p class='text-2xl md:text-4xl text-gray-300 max-w-2xl mx-auto mt-2'>
+      Bienvenido a <span
+        class='font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#314aa9] via-[#368beb] to-[#83d6e7]'
+        >Share IT</span
+      >.
+    </p>
+    <p class='text-gray-300 mx-auto m-4 max-w-[600px]'>
+      <span class='font-bold'>Un rincón para compartir</span> los conocimientos y
+      recursos que nos han guiado y ayudado, tanto a mí como a otros desarrolladores,
+      en <span class='font-bold'>nuestro recorrido</span>.
     </p>
     <div class='flex sm:flex-row justify-center gap-4 flex-col'>
       <a
