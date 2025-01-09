@@ -38,39 +38,43 @@ const nextUrl =
 
 <div class='flex items-center justify-between mt-8' aria-label='Pagination'>
   {
-    showPrevNext && (
-      <a
-        href={prevUrl ?? '#'}
-        class={` text-sm  ${
-          prevUrl
-            ? 'text-[#368beb] hover:text-[#83D6E7]'
-            : 'text-gray-500 cursor-not-allowed'
-        }`}
-        aria-disabled={!prevUrl}
-        tabindex={prevUrl ? 0 : -1}
-      >
-        {labels.prev}
-      </a>
-    )
+    showPrevNext &&
+      (prevUrl ? (
+        <a
+          href={prevUrl}
+          class={'text-sm text-[#368beb] hover:text-[#83D6E7]'}
+          aria-disabled={!prevUrl}
+          tabindex={prevUrl ? 0 : -1}
+        >
+          {labels.prev}
+        </a>
+      ) : (
+        <span class='text-sm text-gray-500 cursor-not-allowed'>
+          {labels.prev}
+          <i class='bx bx-right-arrow-alt' />
+        </span>
+      ))
   }
   <span class='text-sm text-gray-300'
     >{labels.page} {validCurrentPage} {labels.of} {totalPages}</span
   >
 
   {
-    showPrevNext && (
-      <a
-        href={nextUrl ?? '#'}
-        class={` text-sm ${
-          nextUrl
-            ? 'text-[#368beb] hover:text-[#83D6E7]'
-            : 'text-gray-500 cursor-not-allowed'
-        }`}
-        aria-disabled={!nextUrl}
-        tabindex={nextUrl ? 0 : -1}
-      >
-        {labels.next}
-      </a>
-    )
+    showPrevNext &&
+      (nextUrl ? (
+        <a
+          href={nextUrl}
+          class={'text-sm text-[#368beb] hover:text-[#83D6E7]'}
+          aria-disabled={!nextUrl}
+          tabindex={nextUrl ? 0 : -1}
+        >
+          {labels.next}
+        </a>
+      ) : (
+        <span class='text-sm text-gray-500 cursor-not-allowed'>
+          {labels.next}
+          <i class='bx bx-right-arrow-alt' />
+        </span>
+      ))
   }
 </div>
