@@ -11,10 +11,15 @@ const navItems = [
 ]
 ---
 
-<div class='menu'>
+<div class='menu md:hidden flex'>
   <div class='item'>
-    <a href='#' class='link'>
-      <span>Menu</span>
+    <button
+      id='menuButton'
+      class='link'
+      aria-expanded='false'
+      aria-controls='mobileNav'
+    >
+      <span>Menú</span>
       <svg viewBox='0 0 360 360' xml:space='preserve'>
         <g id='SVGRepo_iconCarrier'>
           <path
@@ -23,18 +28,73 @@ const navItems = [
           ></path>
         </g>
       </svg>
-    </a>
+    </button>
 
-    <div class='submenu'>
+    <div id='mobileNav' class='submenu'>
       {
         navItems.map((item) => (
           <div class='submenu-item'>
-            <a href={item.href} class='submenu-link'>
+            <a class='submenu-link' href={item.href}>
               {item.text}
             </a>
           </div>
         ))
       }
     </div>
+
+    <div id='menuBackdrop' class='backdrop'></div>
   </div>
 </div>
+
+<script>
+  const menuButton = document.getElementById('menuButton')
+  const mobileNav = document.getElementById('mobileNav')
+  const menuBackdrop = document.getElementById('menuBackdrop')
+  let touchStartX = 0
+  let touchEndX = 0
+
+  function toggleMenu() {
+    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true'
+    menuButton.setAttribute('aria-expanded', !isExpanded)
+    mobileNav.classList.toggle('active')
+    menuBackdrop.classList.toggle('active')
+    document.body.style.overflow = isExpanded ? '' : 'hidden'
+  }
+
+  // Click handlers
+  menuButton.addEventListener('click', toggleMenu)
+  menuBackdrop.addEventListener('click', toggleMenu)
+
+  // Touch handlers for swipe
+  mobileNav.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX
+  })
+
+  mobileNav.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX
+    if (touchStartX - touchEndX < -50) {
+      // Swipe right to close
+      toggleMenu()
+    }
+  })
+
+  // Close menu when clicking a link
+  const navLinks = mobileNav.querySelectorAll('a')
+  navLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault() // Prevenir la navegación automática
+      toggleMenu() // Cerrar el menú
+      setTimeout(() => {
+        // Esperar un momento para la animación de cierre, luego redirigir
+        window.location.href = e.target.href
+      }, 300) // Ajusta el tiempo según la duración de la animación CSS
+    })
+  })
+
+  // Handle escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+      toggleMenu()
+    }
+  })
+</script>
