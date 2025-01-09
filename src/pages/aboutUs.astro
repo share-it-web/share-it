@@ -17,6 +17,8 @@ const socialLinks = [
     icon: WhatsappIcon,
   },
 ]
+
+const styledParagraph = 'text-[1rem] text-gray-300 leading-relaxed'
 ---
 
 <Layout title='Acerca de | Share IT' showBackButton>
@@ -24,8 +26,8 @@ const socialLinks = [
     <h1 class='text-4xl font-bold text-center mb-8 text-white'>
       Acerca de Nosotros
     </h1>
-    <p class='text-lg text-gray-200 leading-relaxed mb-4'>
-      <span class='font-bold text-[#83D6E7]'>Share</span>
+    <p class=`${styledParagraph} mb-2`>
+      <span class='font-bold text-lg text-[#83D6E7]'>Share</span>
       <span class='font-bold text-[#586ab1]'>IT</span>
       es una comunidad de WhatsApp que <span class='font-bold'
         >reúne a personas de toda índole y de habla hispana</span
@@ -37,61 +39,82 @@ const socialLinks = [
       siempre teniendo en cuenta que la colaboración mutua es el principal motor
       para un crecimiento sostenible. 💪
     </p>
-    <p class='text-lg text-gray-200 leading-relaxed font-bold'>
-      Únete a nosotros y sé parte de esta increíble comunidad.🚀
+    <h2 class='text-2xl font-bold text-white'>
+      ¿Qué vas a encontrar en esta comunidad?
+    </h2>
+    <p class=`${styledParagraph} mt-2`>
+      La comunidad está compuesta por varios grupos, cada uno con una dinámica
+      distinta.
     </p>
-    <p>
+    <div class='flex flex-col gap-2 m-3'>
+      <p class=`${styledParagraph}`>
+        <span class='font-bold font-mono text-[#83D6E7] text-xl'
+          >🗣️ General:</span
+        > El grupo donde nos presentamos y hablamos de cualquier tema que nos interese.
+      </p>
+      <p class=`${styledParagraph}`>
+        <span class='font-bold font-mono text-[#83D6E7] text-xl'
+          >💻🖊️ Proyectos:</span
+        > Si necesitas ayuda con un proyecto personal, o estás buscando equipo para
+        construir tu próxima app, este es el lugar indicado.
+      </p>
+      <p class=`${styledParagraph}`>
+        <span class='font-bold font-mono text-[#83D6E7] text-xl'>
+          🌎📝 Networking y CV:</span
+        > El espacio ideal para que <span class='font-bold'
+          >compartas tus redes sociales y conozcas a otros profesionales de la
+          industria.</span
+        > También vas a poder solicitar una <span class='font-bold'
+          >revisión de tu CV</span
+        > para poder mejorarlo y aumentar tus probabilidades de encontrar ese ansiado
+        empleo.
+      </p>
+      <p class=`${styledParagraph}`>
+        <span class='font-bold font-mono text-[#83D6E7] text-xl'>
+          📚🆘 Recursos y Ayuda:</span
+        > En este grupo <span class='font-bold'
+          >compartimos aquellos recursos (videos, blog posts, enlaces, etc)</span
+        > que nos permitan mejorar nuestros conocimientos y resolver aquellos problemas
+        cuando Google, GPT o StackOverflow no tienen la respuesta.
+      </p>
+      <p class=`${styledParagraph}`>
+        <span class='font-bold font-mono text-[#83D6E7] text-xl'>
+          🇺🇸 English Practice:</span
+        >
+        <span class='font-bold'
+          >¿Te gustaría aprender/practicar/refinar tu inglés?</span
+        > En este espacio vas a poder enviar mensajes de texto y/o voz e interactuar
+        con otras personas que comparten el mismo objetivo, que es dominar el idioma
+        más utilizado a nivel mundial. También desde este lugar organizamos llamadas
+        semanales en nuestro servidor de Discord para tener charlas en tiempo real.
+      </p>
+      <p class=`${styledParagraph}`>
+        <span class='font-bold font-mono text-[#83D6E7] text-xl'>
+          ☕💧 La Llorería:</span
+        > A veces necesitamos hacer catársis de ese compañero que no nos escucha
+        en el trabajo, de aquel profesor que pide cosas imposibles o cuando te ghostean
+        en un proceso laboral. ¡Acá tenés el lugar indicado para descargarte!
+      </p>
+      <p class=`${styledParagraph}`>
+        <span class='font-bold font-mono text-[#83D6E7] text-xl'>
+          💼🤝🏻 Ofertas Laborales:</span
+        > Tal como el nombre lo indica, este grupo es utilizado para compartir ofertas
+        laborales orientadas al sector tecnológico.<span class='font-bold'
+          >¿Y si tu próximo destino laboral está en SHARE IT?</span
+        >
+      </p>
+    </div>
+    <p class='text-sm text-gray-200 leading-relaxed italic'>
       Nota: al ingresar a la comunidad te pediremos que por favor rellenes un
       formulario con algunos datos personales (no se piden datos sensibles) ya
       que llevamos un registro de los usuarios que se incorporan. Esto nos
       permite evitar el ingreso de usuarios maliciosos y contribuye a una
       comunidad más sana.
     </p>
-    <h2>¿Qué vas a encontrar en esta comunidad?</h2>
-    <p>
-      La comunidad está compuesta por varios grupos, cada uno con una dinámica
-      distinta.
+    <p class=`text-lg text-center text-gray-200 leading-relaxed font-bold my-4`>
+      Únete a nosotros y sé parte de esta increíble comunidad.🚀
     </p>
-    <p>
-      🗣️ General: el grupo donde nos presentamos y hablamos de cualquier tema
-      que nos interese.
-    </p>
-    <p>
-      💻🖊️ Proyectos: si necesitas ayuda con un proyecto personal, o estás
-      buscando equipo para construir tu próxima app, este es el lugar indicado
-    </p>
-    <p>
-      🌎📝 Networking y CV: el espacio ideal para que compartas tus redes
-      sociales y conozcas a otros profesionales de la industria. También vas a
-      poder solicitar una revisión de tu CV para poder mejorarlo y aumentar tus
-      probabilidades de encontrar ese ansiado empleo.
-    </p>
-    <p>
-      📚🆘 Recursos y Ayuda: en este grupo compartimos aquellos recursos
-      (videos, blog posts, enlaces, etc) que nos permitan mejorar nuestros
-      conocimientos y resolver aquellos problemas cuando Google, GPT o
-      StackOverflow no tienen la respuesta.
-    </p>
-    <p>
-      🇺🇸🇬🇧 English Practice: ¿te gustaría aprender/practicar/refinar tu inglés?
-      En este espacio vas a poder enviar mensajes de texto y/o voz e interactuar
-      con otras personas que comparten el mismo objetivo, que es dominar el
-      idioma más utilizado a nivel mundial. También desde este lugar organizamos
-      llamadas semanales en nuestro servidor de Discord para tener charlas en
-      tiempo real.
-    </p>
-    <p>
-      ☕💧 La Llorería: a veces necesitamos hacer catársis de ese compañero que
-      no nos escucha en el trabajo, de aquel profesor que pide cosas imposibles
-      o cuando te ghostean en un proceso laboral. ¡Acá tenés el lugar indicado
-      para descargarte!
-    </p>
-    <p>
-      💼🤝🏻 Ofertas Laborales: tal como el nombre lo indica, este grupo es
-      utilizado para compartir ofertas laborales orientadas al sector
-      tecnológico. ¿Y si tu próximo destino laboral está en SHARE IT?
-    </p>
-    <div class='flex sm:flex-row justify-center gap-4 flex-col mt-10'>
+    <div class='flex sm:flex-row justify-center gap-4 flex-col mt-2'>
       {
         socialLinks.map((link) => (
           <a
