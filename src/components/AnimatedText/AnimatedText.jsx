@@ -1,5 +1,5 @@
 import Typewriter from 'typewriter-effect'
-import './style.css'
+import './styles.css'
 
 export const AnimatedText = () => {
   const typeText =

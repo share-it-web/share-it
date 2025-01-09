@@ -1,13 +1,14 @@
 ---
 import ShareIt from '@icons/ShareIt.astro'
+import MobileMenu from './MobileMenu/MobileMenu.astro'
 
 const navItems = [
   { href: '/', text: 'Inicio' },
   { href: '/articles/1', text: 'Artículos' },
-  { href: '/resources', text: 'Recursos' },
-  { href: '/aboutUs', text: 'Sobre nosotros' },
   { href: '/tags', text: 'Tags' },
+  { href: '/resources', text: 'Recursos' },
   { href: '/collaborators', text: 'Autores' },
+  { href: '/aboutUs', text: 'Sobre nosotros' },
 ]
 ---
 
@@ -21,9 +22,7 @@ const navItems = [
     <ul class='flex gap-6' id='menu'>
       {
         navItems.map((item) => (
-          <li
-            class={`md:flex ${item.text === 'Tags' || item.text === 'Autores' ? 'flex' : 'hidden'}`}
-          >
+          <li class='md:flex hidden'>
             <a
               href={item.href}
               class='text-gray-300 hover:text-[#83D6E7] transition-colors font-bold'
@@ -34,5 +33,6 @@ const navItems = [
         ))
       }
     </ul>
+    <MobileMenu />
   </nav>
 </header>
