@@ -1,8 +1,8 @@
 ![blog-logo](https://github.com/user-attachments/assets/abe6f530-723e-4d4d-8924-2b6d40cd58c8)
 
-# Share It Blog 🚀
+# Share IT Blog 🚀
 
-Bienvenido a **Share It**. Un rincón para compartir los conocimientos y recursos que me han guiado y ayudado, tanto a mí como a otros desarrolladores, en nuestro recorrido. En mi camino, he aprendido lo fundamental que es la tecnología en nuestras vidas diarias y cómo puede realmente transformar vidas. 🌟
+Bienvenido a **Share IT**. Un rincón para compartir los conocimientos y recursos que me han guiado y ayudado, tanto a mí como a otros desarrolladores, en nuestro recorrido. En mi camino, he aprendido lo fundamental que es la tecnología en nuestras vidas diarias y cómo puede realmente transformar vidas. 🌟
 
 ## 🛠️ Funcionalidades
 
@@ -104,7 +104,7 @@ author:
 ---
 ```
 
-**¡Gracias por visitar Share it! 🙌**
+**¡Gracias por visitar Share IT! 🙌**
 
 ## 🗂️ Estructura del Proyecto
 
@@ -132,7 +132,7 @@ Dentro de tu proyecto Astro, verás las siguientes carpetas y archivos:
 ## 🚀 Conoce al creador y el repositorio de la comunidad
 
 - [Elias Velazquez 👨🏻‍💻](https://github.com/eliasvelazquezdev)
-- [Share It Recursos 📃](https://github.com/eliasvelazquezdev/share-it-resources)
+- [Share IT Recursos 📃](https://github.com/eliasvelazquezdev/share-it-resources)
 
 ---
 
