@@ -21,7 +21,7 @@
   --nav-border-width: 0.0625em;
   --nav-shadow-color: rgba(0, 0, 0, 0.2);
   --nav-shadow-width: 0 1px 5px;
-  --nav-bg: #eee;
+  --nav-bg: #111827;
   --nav-font-family: Menlo, Roboto Mono, monospace;
   --nav-default-scale: 0.8;
   --nav-active-scale: 1;
@@ -30,7 +30,7 @@
   /* if you want to change sides just switch one property */
   /* from properties to "unset" and the other to 0 */
   /* title */
-  --nav-title-size: 0.625em;
+  --nav-title-size: 0.725em;
   --nav-title-color: #777;
   --nav-title-padding-x: 1rem;
   --nav-title-padding-y: 0.25em;
@@ -38,7 +38,7 @@
   --nav-button-padding-x: 1rem;
   --nav-button-padding-y: 0.375em;
   --nav-button-border-radius: 0.375em;
-  --nav-button-font-size: 12px;
+  --nav-button-font-size: 14px;
   --nav-button-hover-bg: #6495ed;
   --nav-button-hover-text-color: #fff;
   --nav-button-distance: 0.875em;
@@ -139,7 +139,7 @@
   background: none;
   display: flex;
   align-items: center;
-  color: #444444;
+  color: #f1f1f1;
   font-size: var(--nav-button-font-size);
   padding: var(--nav-button-padding-y) var(--nav-button-padding-x);
   white-space: nowrap;
