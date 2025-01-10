@@ -53,7 +53,7 @@ Para añadir nuevos artículos y recursos al blog, sigue estos pasos:
    ```typescript
    ---
    title: 'Título del Artículo'
-   description: 'Descripción corta del articulo'
+   description: 'Descripción corta del artículo'
    date: 'YYYY-MM-DD'
    draft: false
    author: 'Nombre del Autor'

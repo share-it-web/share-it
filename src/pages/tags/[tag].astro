@@ -2,9 +2,9 @@
 import ResourceCard from '@components/ResourceCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-import { formatDate } from 'src/utils/dates'
 import { getAllTags } from 'src/utils/tags'
 import { resources as allResources, resources } from 'src/utils/resources'
+import ArticleCard from '@components/ArticleCard.astro'
 
 export async function getStaticPaths() {
   // const resources = await getCollection('resources')
@@ -66,7 +66,7 @@ const contentItems = [
           {articles.length > 0 ? (
             <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
               {articles.map((article) => (
-                <ResourceCard
+                <ArticleCard
                   date={article.data.date}
                   title={article.data.title}
                   description={article.data.description}
