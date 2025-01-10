@@ -11,90 +11,25 @@ const navItems = [
 ]
 ---
 
-<div class='menu md:hidden flex'>
-  <div class='item'>
-    <button
-      id='menuButton'
-      class='link'
-      aria-expanded='false'
-      aria-controls='mobileNav'
-    >
-      <span>Menú</span>
-      <svg viewBox='0 0 360 360' xml:space='preserve'>
-        <g id='SVGRepo_iconCarrier'>
-          <path
-            id='XMLID_225_'
-            d='M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z'
-          ></path>
-        </g>
-      </svg>
-    </button>
-
-    <div id='mobileNav' class='submenu'>
+<label class='popup'>
+  <input type='checkbox' />
+  <div class='burger' tabindex='0'>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <nav class='popup-window'>
+    <legend>Menu</legend>
+    <ul>
       {
         navItems.map((item) => (
-          <div class='submenu-item'>
+          <li>
             <a class='submenu-link' href={item.href}>
               {item.text}
             </a>
-          </div>
+          </li>
         ))
       }
-    </div>
-
-    <div id='menuBackdrop' class='backdrop'></div>
-  </div>
-</div>
-
-<script>
-  const menuButton = document.getElementById('menuButton')
-  const mobileNav = document.getElementById('mobileNav')
-  const menuBackdrop = document.getElementById('menuBackdrop')
-  let touchStartX = 0
-  let touchEndX = 0
-
-  function toggleMenu() {
-    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true'
-    menuButton.setAttribute('aria-expanded', !isExpanded)
-    mobileNav.classList.toggle('active')
-    menuBackdrop.classList.toggle('active')
-    document.body.style.overflow = isExpanded ? '' : 'hidden'
-  }
-
-  // Click handlers
-  menuButton.addEventListener('click', toggleMenu)
-  menuBackdrop.addEventListener('click', toggleMenu)
-
-  // Touch handlers for swipe
-  mobileNav.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX
-  })
-
-  mobileNav.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX
-    if (touchStartX - touchEndX < -50) {
-      // Swipe right to close
-      toggleMenu()
-    }
-  })
-
-  // Close menu when clicking a link
-  const navLinks = mobileNav.querySelectorAll('a')
-  navLinks.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault() // Prevenir la navegación automática
-      toggleMenu() // Cerrar el menú
-      setTimeout(() => {
-        // Esperar un momento para la animación de cierre, luego redirigir
-        window.location.href = e.target.href
-      }, 300) // Ajusta el tiempo según la duración de la animación CSS
-    })
-  })
-
-  // Handle escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
-      toggleMenu()
-    }
-  })
-</script>
+    </ul>
+  </nav>
+</label>
