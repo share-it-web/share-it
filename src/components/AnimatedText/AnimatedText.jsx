@@ -11,18 +11,18 @@ export const AnimatedText = () => {
         <Typewriter
           onInit={(typewriter) => {
             typewriter
-              .pauseFor(300)
-              .typeString(
-                '<span>console.log("<span class="string">¡Hola Mundo!</span>")</span>'
-              )
+              // .pauseFor(300)
+              // .typeString(
+              //   '<span>console.log("<span class="string">¡Hola Mundo!</span>")</span>'
+              // )
               .pauseFor(300)
               .deleteAll('natural')
               .typeString(
-                '<span>print("<span class="string">Hello World!</span>")</span>'
+                '<span>print("<span class="string">¡Hola Mundo!</span>")</span>'
               )
               .deleteAll('natural')
               .typeString(
-                '<span>puts "<span class="string">Ciao Mondo!</span>"</span>'
+                '<span>puts "<span class="string">Hello World!</span>"</span>'
               )
               .deleteAll('natural')
               .typeString(
