@@ -3,7 +3,7 @@ import ResourceCard from '@components/ResourceCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import { getAllTags } from 'src/utils/tags'
-import { resources as allResources, resources } from 'src/utils/resources'
+import { resources as allResources } from 'src/utils/resources'
 import ArticleCard from '@components/ArticleCard.astro'
 
 export async function getStaticPaths() {
@@ -46,13 +46,7 @@ const contentItems = [
 ]
 ---
 
-<Layout title={`${tag} | Tags`}>
-  <div class='mb-8'>
-    <a href='/tags' class='text-[#368beb] hover:text-[#83d6e7]'
-      >← Volver a Tags</a
-    >
-  </div>
-
+<Layout title={`${tag} | Tags`} showBackButton>
   <h1 class='text-4xl font-bold mb-8 text-white'>
     Contenido en {tag}
     <span class='text-lg text-gray-400 ml-2'>({contentItems.length})</span>
