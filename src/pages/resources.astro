@@ -1,5 +1,5 @@
 ---
-import ResourceCard from '@components/ResourceCard.astro'
+import ContentCard from '@components/ContentCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { resources } from 'src/utils/resources'
 
@@ -26,7 +26,9 @@ const sortedResources = resources.sort(
     ) : (
       <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
         {sortedResources.map((resource) => (
-          <ResourceCard
+          <ContentCard
+            target='_blank'
+            rel='noopener noreferrer'
             title={resource.title}
             description={resource.description}
             category={resource.category}

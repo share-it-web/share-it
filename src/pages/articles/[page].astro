@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content'
 import Layout from '@layouts/Layout.astro'
 import Pagination from '@components/Pagination.astro'
-import ArticleCard from '@components/ArticleCard.astro'
+import ContentCard from '@components/ContentCard.astro'
 
 export async function getStaticPaths({
   paginate,
@@ -54,7 +54,8 @@ const {
         </div>
       ) : (
         articles.map((article) => (
-          <ArticleCard
+          <ContentCard
+            additionalClass='h-[250px]'
             title={article.data.title}
             description={article.data.description}
             category={article.data.category}

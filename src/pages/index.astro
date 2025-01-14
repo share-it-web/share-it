@@ -1,7 +1,6 @@
 ---
 import { AnimatedText } from '@components/AnimatedText/AnimatedText'
-import ArticleCard from '@components/ArticleCard.astro'
-import ResourceCard from '@components/ResourceCard.astro'
+import ContentCard from '@components/ContentCard.astro'
 import Layout from '@layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import { resources } from 'src/utils/resources'
@@ -55,7 +54,8 @@ export const prerender = true
     <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
       {
         latestArticles.map((article) => (
-          <ArticleCard
+          <ContentCard
+            additionalClass='md:h-[200px] h-[220px]'
             title={article.data.title}
             description={article.data.description}
             category={article.data.category}
@@ -85,7 +85,9 @@ export const prerender = true
         <h2 class='text-3xl font-bold mb-6 text-white'>📚 Recursos Destacados</h2>
         <div class='grid grid-cols-1 md:grid-cols-2 gap-6'>
           {latestResources.map((resource) => (
-            <ResourceCard
+            <ContentCard
+              target='_blank'
+              rel='noopener noreferrer'
               title={resource.title}
               description={resource.description}
               category={resource.category}
