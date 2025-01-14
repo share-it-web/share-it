@@ -137,4 +137,15 @@ const { title, showBackButton = false } = Astro.props
   .prose hr {
     @apply border-t border-gray-700 my-4;
   }
+
+  /*Card title hover */
+  .card-title {
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  .card-share-it:hover .card-title {
+    color: #83d6e7;
+  }
 </style>
