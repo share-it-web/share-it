@@ -1,0 +1,49 @@
+---
+import { formatDate } from 'src/utils/dates'
+
+interface Props {
+  title: string
+  description: string
+  category: string
+  href: string
+  date: Date
+  additionalClass?: string
+  target?: string
+  rel?: string
+}
+
+const {
+  title,
+  description,
+  category,
+  href,
+  date,
+  additionalClass,
+  target,
+  rel,
+} = Astro.props
+---
+
+<a
+  href={href}
+  target={target}
+  rel={rel}
+  class='card-share-it relative block p-6 bg-gray-800 border rounded-lg border-[#368beb] hover:border-[#83D6E7] transition-colors'
+>
+  <div
+    class={`flex flex-col justify-between ${additionalClass ? additionalClass : 'h-auto'}`}
+  >
+    <div class='flex flex-col gap-2 mb-2'>
+      <p class='card-title text-lg font-bold text-[#368beb]'>{title}</p>
+      <p class='text-gray-300 text-sm'>
+        {description}
+      </p>
+    </div>
+    <div class='flex flex-col items-start gap-2 text-xs'>
+      <p class='text-gray-400'>{formatDate(date.toISOString())}</p>
+      <span class='bg-[#314aa9] text-violet-200 px-2 py-1 rounded'>
+        {category}
+      </span>
+    </div>
+  </div>
+</a>
