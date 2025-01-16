@@ -31,6 +31,8 @@ Ahora bien, **¿cómo podemos mejorar nuestra lógica a la hora de resolver un p
 
 Ahora vamos a poner en práctica nuestra lógica🚀
 
+<div align='center'><img src='https://github.com/user-attachments/assets/54f6b5ac-b4cb-4faa-915b-f6383f811155'/></div>
+
 ---
 
 ## Ejercicio para practicar👨🏻💻
@@ -123,11 +125,10 @@ function twoSum(nums, target) {
 
 ![two-sum-2](https://github.com/user-attachments/assets/b588e2eb-8158-4962-adf7-42f711bdc91d)
 
-<div align='center'>
-<b>Ejercicio Two Sum - Método b</b>
-</div>
 
-Et voilà. El ejercicio está resuelto🤯
+
+<div align='center'><img src='https://github.com/user-attachments/assets/e735d4b2-7a78-4221-b1cd-ad77eaefdf6b'/><p>Et voilà. El ejercicio está resuelto🤯</p></div>
+
 
 ---
 
