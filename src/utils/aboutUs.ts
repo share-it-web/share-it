@@ -76,8 +76,7 @@ export const admins = [
     name: 'Natalia Quevedo (Brooke)',
     about: 'Admin',
     role: 'UX/UI Designer',
-    avatar:
-      'https://gravatar.com/avatar/8eaeb95d19f64e38f348a0e26598dd2f?s=400&d=robohash&r=x',
+    avatar: '/images/naty-avatar.jpg',
     linkedin: 'https://www.linkedin.com/in/natalia-a-quevedo/',
   },
   {
@@ -111,14 +110,12 @@ export const admins = [
     website: 'https://jeanroa.dev/',
   },
   {
-    name: 'Claudia',
+    name: 'Claudia Metz',
     about: 'Admin',
-    role: 'lorem',
+    role: ' Data Scientist',
     avatar:
-      'https://gravatar.com/avatar/f8e4d03faf91b892f1190e2777cea1a6?s=400&d=robohash&r=x',
-    github: 'aaa',
-    linkedin: 'aaa',
-    website: 'aa',
+      'https://robohash.org/40cc5b01aede2babf25f44b94b3998cf?set=set4&bgset=&size=400x400',
+    linkedin: 'https://www.linkedin.com/in/claudia-metz/',
   },
   {
     name: 'Nicolás Cruz (Nico)',
@@ -142,9 +139,17 @@ export const admins = [
   {
     name: 'Fernando Cardozo',
     about: 'Admin',
-    role: 'lorem',
-    avatar:
-      'https://gravatar.com/avatar/3216f824bed7803b2b227453d6733ab5?s=400&d=robohash&r=x',
+    role: 'Professional Fisherman',
+    avatar: '/images/fernando-avatar.jpeg',
+    github: 'a',
+    linkedin: 'a',
+    website: 'a',
+  },
+  {
+    name: 'Victor Quiñones',
+    about: 'Admin',
+    role: 'Frontend Developer',
+    avatar: 'https://i.ibb.co/Dzd33xD/profile-perfil.jpg',
     github: 'a',
     linkedin: 'a',
     website: 'a',
