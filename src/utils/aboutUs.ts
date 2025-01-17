@@ -66,8 +66,7 @@ export const admins = [
     name: 'Elias Velázquez (Kani)',
     about: 'Fundador de la Comunidad',
     role: 'Data Engineer',
-    avatar:
-      'https://gravatar.com/avatar/44079e250daad3785cc515371c72bde6?s=400&d=robohash&r=x',
+    avatar: '/images/kani-avatar.jpg',
     github: 'https://github.com/eliasvelazquezdev',
     linkedin: 'https://linkedin.com/in/eliassvelazquez',
     website: 'http://evelazquez.dev/',
@@ -83,8 +82,7 @@ export const admins = [
     name: 'Eros Benitez (Shinigamy)',
     about: 'Admin',
     role: 'Diseñador Multimedia',
-    avatar:
-      'https://gravatar.com/avatar/d946fa871e8fc6f41ad01a2107533ee5?s=400&d=robohash&r=x',
+    avatar: '/images/eros-avatar.jpg',
     github: 'https://github.com/Shinigamy19',
     linkedin: 'https://www.linkedin.com/in/eros-benitez/',
     website: 'https://www.behance.net/shinigamy19',
@@ -103,8 +101,7 @@ export const admins = [
     name: 'Jean Roa (Drak)',
     about: 'Admin',
     role: 'Software Developer',
-    avatar:
-      'https://gravatar.com/avatar/c0dfea241b7ea688c3845b62c81d813e?s=400&d=robohash&r=x',
+    avatar: '/images/drak-avatar.jpeg',
     github: 'https://github.com/jeanroadev',
     linkedin: 'https://www.linkedin.com/in/jeanmra/',
     website: 'https://jeanroa.dev/',
@@ -121,8 +118,7 @@ export const admins = [
     name: 'Nicolás Cruz (Nico)',
     about: 'Admin',
     role: 'Fullstack Developer',
-    avatar:
-      'https://gravatar.com/avatar/4fea93acfb1ca5bf17ee1c719a8c1cb3?s=400&d=robohash&r=x',
+    avatar: '/images/nico-avatar.jpg',
     github: 'https://github.com/NicoFJCruz',
     linkedin: 'https://www.linkedin.com/in/nicofj-cruz',
     website: 'http://nicolascruz.jovinet.com/',
