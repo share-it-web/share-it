@@ -70,6 +70,7 @@ export const admins = [
     github: 'https://github.com/eliasvelazquezdev',
     linkedin: 'https://linkedin.com/in/eliassvelazquez',
     website: 'http://evelazquez.dev/',
+    twitter: 'https://x.com/esvdev',
   },
   {
     name: 'Natalia Quevedo (Brooke)',
@@ -79,23 +80,22 @@ export const admins = [
     linkedin: 'https://www.linkedin.com/in/natalia-a-quevedo/',
   },
   {
-    name: 'Eros Benitez (Shinigamy)',
+    name: 'Eros Benitez (Shini)',
     about: 'Admin',
     role: 'Diseñador Multimedia',
     avatar: '/images/eros-avatar.jpg',
     github: 'https://github.com/Shinigamy19',
     linkedin: 'https://www.linkedin.com/in/eros-benitez/',
-    website: 'https://www.behance.net/shinigamy19',
+    website: 'https://linktr.ee/shinigamy19',
   },
   {
-    name: 'Ani',
+    name: 'Ana Rivarola',
     about: 'Admin',
-    role: 'Admin',
-    avatar:
-      'https://gravatar.com/avatar/7e6d12de6c0ebb3b57e0b0b8a23ce0dc?s=400&d=robohash&r=x',
-    github: '',
-    linkedin: '#',
-    website: '',
+    role: 'Frontend | CM | Tester Qa',
+    avatar: '/images/ana-avatar.jpg',
+    github: 'https://github.com/Anita1555',
+    linkedin: 'https://www.linkedin.com/in/anabelenrivarola/',
+    instagram: 'https://www.instagram.com/anibel1555?igsh=MXB3NWMxb3gycHFyZQ==',
   },
   {
     name: 'Jean Roa (Drak)',
@@ -110,8 +110,7 @@ export const admins = [
     name: 'Claudia Metz',
     about: 'Admin',
     role: ' Data Scientist',
-    avatar:
-      'https://robohash.org/40cc5b01aede2babf25f44b94b3998cf?set=set4&bgset=&size=400x400',
+    avatar: '/images/claudia-avatar.jpg',
     linkedin: 'https://www.linkedin.com/in/claudia-metz/',
   },
   {
@@ -122,13 +121,13 @@ export const admins = [
     github: 'https://github.com/NicoFJCruz',
     linkedin: 'https://www.linkedin.com/in/nicofj-cruz',
     website: 'http://nicolascruz.jovinet.com/',
+    twitter: 'https://x.com/NicoCruzDev',
   },
   {
     name: 'Virginia García',
     about: 'Admin',
     role: 'Analista Funcional',
-    avatar:
-      'https://gravatar.com/avatar/491e02043692650e16f31cb3dce7b405?s=400&d=robohash&r=x',
+    avatar: '/images/virginia-avatar.jpg',
     github: 'https://github.com/virginia-garcia',
     linkedin: 'https://www.linkedin.com/in/garcia-virginia/',
   },
@@ -137,9 +136,7 @@ export const admins = [
     about: 'Admin',
     role: 'Professional Fisherman',
     avatar: '/images/fernando-avatar.jpeg',
-    github: '',
-    linkedin: '#',
-    website: '',
+    twitter: 'h',
   },
   {
     name: 'Victor Quiñones',
