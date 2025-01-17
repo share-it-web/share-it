@@ -138,13 +138,4 @@ export const admins = [
     avatar: '/images/fernando-avatar.jpeg',
     twitter: 'h',
   },
-  {
-    name: 'Victor Quiñones',
-    about: 'Admin',
-    role: 'Frontend Developer',
-    avatar: 'https://i.ibb.co/Dzd33xD/profile-perfil.jpg',
-    github: 'https://github.com/Vctorqui',
-    linkedin: 'https://www.linkedin.com/in/victorqui/',
-    website: 'https://victorqui-portfolio.netlify.app/',
-  },
 ]
